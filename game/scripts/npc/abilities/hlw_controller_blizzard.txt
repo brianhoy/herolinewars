@@ -1,0 +1,77 @@
+//=================================================================================================================
+// Controller Ability: Blizzard 
+// Calls down 8 freezing ice shard waves; each wave deals 800 damage to units in an area.
+//=================================================================================================================
+"hlw_controller_blizzard"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+
+	"MaxLevel"						"4"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_HERO"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"crystal_maiden_freezing_field"
+	"AOERadius"						"%area_of_effect"
+	"AbilityDamage"					"%damage"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts"
+
+		"particle"		"particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/maiden_freezing_field_explosion_arcana1.vpcf"
+		"particle"		"particles/units/heroes/hero_crystalmaiden/maiden_freezing_field_snow.vpcf"
+		"particle"		"particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/maiden_freezing_field_casterribbons_glow2_arcana1.vpcf"
+		"particle"		"particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/maiden_freezing_field_casterribbons_arcana1.vpcf"
+		"particle"		"particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/maiden_freezing_field_darkcore_arcana1.vpcf"
+		"particle"		"particles/units/heroes/hero_crystalmaiden/maiden_freezing_field_explosion.vpcf"
+	}
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0"
+	"AbilityCooldown"				"15"
+	"AbilityManaCost"				"350"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"		"abilities/blizzard.lua"
+			"Function"			"start_field"
+			"Target"			"POINT"
+			"Damage"			"%damage"
+			"IceShardWaveCount"	"%ice_shard_wave_count"
+			"AreaOfEffect"		"%area_of_effect"
+		}	
+	}
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage"				"100 200 300 400"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"ice_shard_wave_count"	"200 250 300 350"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"area_of_effect"		"400 500 600 700"
+		}
+	}
+}

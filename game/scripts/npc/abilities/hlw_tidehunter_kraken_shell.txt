@@ -1,0 +1,35 @@
+//=================================================================================================================
+// Ability: Tidehunter Kraken Shell
+//=================================================================================================================
+"hlw_tidehunter_kraken_shell"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	"hlw_tidehunter_kraken_shell"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_armor"				"5 10 15 25"
+		}
+	}
+	"Modifiers"
+	{
+		"modifier_dragon_blood_datadriven"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%bonus_armor"
+			}
+		}
+	}
+}

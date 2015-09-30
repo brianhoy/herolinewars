@@ -1,0 +1,48 @@
+"npc_dota_unit_hlw_level31"
+{
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models\creeps\roshan\roshan.vmdl"
+	"SoundSet"					"Roshan"
+
+	"ModelScale" 				"1.4"
+	"Level"						"99"
+	"IsAncient"					"1"
+	"IsConsideredHero"			"0"
+
+	"ArmorPhysical"				"30"
+	"MagicalResistance"			"30"
+
+	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackDamageMin"			"500"
+	"AttackDamageMax"			"500"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackRate"				"0.5"
+	"AttackAnimationPoint"		"0.1"
+	"AttackAcquisitionRange"	"500"
+	"AttackRange"				"128"
+
+	"BountyXP"					"20000"
+	"BountyGoldMin"				"30000"
+	"BountyGoldMax"				"50000"
+
+	"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+	"RingRadius"				"110"
+	"HealthBarOffset"			"500"
+
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"				"500"
+	"MovementTurnRate"			"1"
+
+	"StatusHealth"				"100000"
+	"StatusHealthRegen"			"1000"
+	"StatusMana"				"0"
+	"StatusManaRegen"			"0"
+
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_LIGHT"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+	"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+	"VisionDaytimeRange"		"850"
+	"VisionNighttimeRange"		"800"
+ 
+}

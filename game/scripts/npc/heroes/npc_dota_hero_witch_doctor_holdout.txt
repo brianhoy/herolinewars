@@ -1,0 +1,10 @@
+//=================================================================================================================
+// HERO: Witch Doctor
+//=================================================================================================================
+"npc_dota_hero_witch_doctor_holdout"
+{
+	"override_hero"			"npc_dota_hero_witch_doctor"
+	"Ability1"				"holdout_paralyzing_cask"
+	"Ability2"				"holdout_voodoo_restoration"
+	"Ability4"				"holdout_death_ward"
+}

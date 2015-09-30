@@ -1,0 +1,8 @@
+hlw_map_1
+{
+	material materials/overviews/hlw_map_1.vmat
+	pos_x -5112
+	pos_y 5112
+	scale 9.984
+}
+

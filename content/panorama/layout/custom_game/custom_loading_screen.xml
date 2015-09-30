@@ -1,0 +1,55 @@
+<root>
+  <styles>
+    <include src="file://{resources}/styles/custom_game/custom_loading_screen.css" />
+  </styles>
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/loading-screen.js" />
+    </scripts>
+  <Panel class="AddonLoadingRoot">
+    <Image id="backgroundimage" src="file://{images}/custom_game/loading_screen/hlw-bg1.png"/>
+
+    <Panel id="TitlePanel">
+        
+    <Panel id="Settings">
+        <Label class='SettingsHeader' text="SETTINGS" style="" />
+        <Label class='SettingHeader' id="Difficulty" text="#hlw_setting_creep_difficulty" style="" />
+        <Panel id="DifficultyRow" class="SettingsRow">
+            <Panel class="SettingBox" onactivate="SetSetting('DifficultyRow', 1)"> <Label class="SettingOptionText" text="#hlw_setting_creep_difficulty_1"/> </Panel>
+            <Panel class="SettingBox" onactivate="SetSetting('DifficultyRow', 2)"> <Label class="SettingOptionText" text="#hlw_setting_creep_difficulty_2"/> </Panel>
+            <Panel class="SettingBox" onactivate="SetSetting('DifficultyRow', 3)"> <Label class="SettingOptionText" text="#hlw_setting_creep_difficulty_3"/> </Panel>
+            <Panel class="SettingBox" onactivate="SetSetting('DifficultyRow', 4)"> <Label class="SettingOptionText" text="#hlw_setting_creep_difficulty_4"/> </Panel>
+        </Panel>
+        
+		
+		<!-- People don't know how to use this setting -->
+		<!--<Label class='SettingHeader' text="CREEP INCOME AND COST MULTIPLIER" style="" />
+        <Panel id="GoldMultiplierRow" class="SettingsRow">
+            <Panel class="SettingBox" onactivate="SetSetting('GoldMultiplierRow', 1)"> <Label class="SettingOptionText" text="0.5"/> </Panel>
+            <Panel class="SettingBox" onactivate="SetSetting('GoldMultiplierRow', 2)"> <Label class="SettingOptionText" text="1.0"/> </Panel>
+            <Panel class="SettingBox" onactivate="SetSetting('GoldMultiplierRow', 3)"> <Label class="SettingOptionText" text="1.5"/> </Panel>
+            <Panel class="SettingBox" onactivate="SetSetting('GoldMultiplierRow', 4)"> <Label class="SettingOptionText" text="2.0"/> </Panel>
+        </Panel> -->
+		
+        <Label class='SettingHeader' text="#hlw_setting_max_amount_of_creeps_on_map_short" style="" />
+        <Panel id="MaxCreepPerTeamRow" class="SettingsRow">
+            <Panel class="SettingBox" onactivate="SetSetting('MaxCreepPerTeamRow', 1)"> <Label class="SettingOptionText" text="150"/> </Panel>
+            <Panel class="SettingBox" onactivate="SetSetting('MaxCreepPerTeamRow', 2)"> <Label class="SettingOptionText" text="200"/> </Panel>
+            <Panel class="SettingBox" onactivate="SetSetting('MaxCreepPerTeamRow', 3)"> <Label class="SettingOptionText" text="250"/> </Panel>
+            <Panel class="SettingBox" onactivate="SetSetting('MaxCreepPerTeamRow', 4)"> <Label class="SettingOptionText" text="300"/> </Panel>
+        </Panel>
+        
+        <Label class='SettingHeader' text="#hlw_setting_max_creep_charges_short" style="" />
+        <Panel id="MaxChargesPerCreepRow" class="SettingsRow">
+            <Panel class="SettingBox" onactivate="SetSetting('MaxChargesPerCreepRow', 1)"> <Label class="SettingOptionText" text="3"/> </Panel>
+            <Panel class="SettingBox" onactivate="SetSetting('MaxChargesPerCreepRow', 2)"> <Label class="SettingOptionText" text="5"/> </Panel>
+            <Panel class="SettingBox" onactivate="SetSetting('MaxChargesPerCreepRow', 3)"> <Label class="SettingOptionText" text="7"/> </Panel>
+            <Panel class="SettingBox" onactivate="SetSetting('MaxChargesPerCreepRow', 4)"> <Label class="SettingOptionText" text="10"/> </Panel>
+        </Panel>
+		
+        <Label class='SettingNote' text="#hlw_setting_note" style="" />
+    </Panel>
+
+    </Panel>
+    <Label id="AddonTitle" text="#addon_game_name" style="" />
+  </Panel>
+</root>

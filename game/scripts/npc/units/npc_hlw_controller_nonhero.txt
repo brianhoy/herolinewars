@@ -1,0 +1,57 @@
+"npc_hlw_controller_nonhero"
+{
+	"BaseClass"				 "npc_dota_creature"	// Class of entity of link to.
+	"precache"
+	{
+		"model"					"models/courier/donkey_crummy_wizard_2014/donkey_crummy_wizard_2014.vmdl"
+	}
+	"Model"						"models/courier/donkey_crummy_wizard_2014/donkey_crummy_wizard_2014.vmdl"
+
+	"MinimapIcon"				"minimap_courier"
+
+	"AbilityLayout"				"6"
+	"Ability1"					"hlw_controller_sunstrike"
+	"Ability2"					"hlw_controller_arc_lightning"
+	"Ability3"					"hlw_controller_crushing_wave"
+	"Ability4"					"hlw_controller_blizzard"
+	"Ability5"					"hlw_controller_moonsoon"
+	"Ability6"					"hlw_controller_cyclone"
+	
+	"ArmorPhysical"				"0"
+	"MagicalResistance"			"0"
+
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackRate"				"0"
+	"AttackAnimationPoint"		"0"
+	"AttackAcquisitionRange"	"0"
+	"AttackRange"				"0"
+
+	"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+	"AttributeBaseStrength"		"0"
+	"AttributeStrengthGain"		"0"
+	"AttributeBaseIntelligence"	"0"
+	"AttributeIntelligenceGain"	"0"
+	"AttributeBaseAgility"		"0"
+	"AttributeAgilityGain"		"0"
+
+	"BountyXP"					"0"
+	"BountyGoldMin"				"0"
+	"BountyGoldMax"				"0"
+
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"			 	"200"
+	"MovementTurnRate"			"1.0"
+	"FollowRange"			 	"250"
+	"StatusHealth"				"1"
+	"StatusHealthRegen"			"0"
+	"StatusMana"				"1000"
+	"StatusManaRegen"			"2"
+	
+	"VisionDaytimeRange"		"3000"
+	"VisionNighttimeRange"		"3000"
+
+	"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+} 

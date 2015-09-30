@@ -1,0 +1,19 @@
+.Root
+{
+	width: 100%;
+	height: 100%;
+}
+
+.ArrowImage
+{
+	vertical-align: bottom;
+    horizontal-align: left;
+	margin-left: 595px;
+    margin-bottom: 50px;
+	transform: scaleX(0.2) scaleY(0.2);
+}
+
+.Hide
+{
+	transform: translateX( 0px ) translateY( 3000px );
+}

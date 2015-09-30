@@ -1,0 +1,36 @@
+"npc_dota_et_spirit_hlw"
+{										
+	"Model"						"models/heroes/elder_titan/ancestral_spirit.vmdl"
+	"BaseClass"					"npc_dota_creature"
+	"SoundSet"					"0"	
+	"Level"						"1"
+	"ModelScale"				"1.0"
+	"ConsideredHero"			"1"
+	"IsAncient"					"1"
+	"Ability1"					"elder_titan_echo_stomp_hlw"
+
+	"ArmorPhysical"				"0"
+
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK" 
+
+	"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+
+	"BountyXP"					"0"
+	"BountyGoldMin"				"0"
+	"BountyGoldMax"				"0"
+
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+	"MovementSpeed"				"0"
+	"MovementTurnRate"			"0.5"
+
+	"StatusHealth"				"100"
+	"StatusHealthRegen"			"0.0"	
+	
+	"VisionDaytimeRange"		"3000"
+	"VisionNighttimeRange"		"3000"
+
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+	"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+}

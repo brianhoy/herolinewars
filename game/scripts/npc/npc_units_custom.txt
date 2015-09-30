@@ -1,0 +1,2480 @@
+"DOTAUnits"
+{
+	"npc_dota_et_spirit_hlw"
+	{										
+		"Model"						"models/heroes/elder_titan/ancestral_spirit.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"0"	
+		"Level"						"1"
+		"ModelScale"				"1.0"
+		"ConsideredHero"			"1"
+		"IsAncient"					"1"
+		"Ability1"					"elder_titan_echo_stomp_hlw"
+	
+		"ArmorPhysical"				"0"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK" 
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+	
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0.5"
+	
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"0.0"	
+		
+		"VisionDaytimeRange"		"3000"
+		"VisionNighttimeRange"		"3000"
+	
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+	"npc_dota_fortify_dummy"
+	{
+		"Model"						"models/development/invisiblebox.vmdl"
+		"BaseClass"					"npc_dota_building"
+		"SoundSet"					"0"	
+		"Level"						"1"
+		"ModelScale"				"1"
+		"Ability1"					"hide_unit_dummy"
+	
+		"CanBeDominated"			"0"
+	
+		"ArmorPhysical"				"0"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK" 
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+	
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0.5"
+	
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"0.0"	
+		
+		"VisionDaytimeRange"		"3000"
+		"VisionNighttimeRange"		"3000"
+	
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+	"npc_dota_fortify_stunner"
+	{										
+		"Model"						"models/development/invisiblebox.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"0"	
+		"Level"						"1"
+		"ModelScale"				"1"
+		"Ability1"					"fortify_stun"
+		"Ability2"					"hide_unit_dummy"
+	
+		"ArmorPhysical"				"0"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK" 
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+	
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0.5"
+	
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"0.0"	
+		
+		"VisionDaytimeRange"		"3000"
+		"VisionNighttimeRange"		"3000"
+	
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+	"npc_dota_inferno_dummy"
+	{
+		"Model"						"models/development/invisiblebox.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"0"	
+		"Level"						"1"
+		"ModelScale"				"1"
+		"Ability1"					"jakiro_macropyre_hlw"
+		"Ability2"					"hide_unit_dummy"
+	
+		"ArmorPhysical"				"0"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK" 
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+	
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0.5"
+	
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"0.0"	
+		
+		"VisionDaytimeRange"		"3000"
+		"VisionNighttimeRange"		"3000"
+	
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	}
+	//=================================================================================	
+	// Holdout: Guardian Angel
+	//=================================================================================
+	"npc_dota_summoned_guardian_angel"
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creep"
+		"SoundSet"					"n_creep_Ranged"
+		"Level"						"1"
+		"ModelScale" 				"1.20"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+	
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"			// Physical protection.
+	
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"1"		// Damage range min.
+		"AttackDamageMax"			"1"		// Damage range max.
+		"AttackRate"				"1.0"		// Speed of attack.
+		"AttackAnimationPoint"		"0.4"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"1500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/neutral_fx/gnoll_base_attack.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1500"		// Speed of projectile.				 
+	
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"40"
+		"HealthBarOffset"			"170"
+	
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"41"		// Experience earn.
+		"BountyGoldMin"				"36"		// Gold earned min.
+		"BountyGoldMax"				"43"		// Gold earned max.
+	
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"350"		// Speed.			
+	
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"75"		// Base health.
+		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		"StatusMana"				"200"			// Base mana.
+		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1500"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1500"		// Range of vision at night time.
+	
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	}
+	"npc_dota_unit_basecreep"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/lane_creeps/creep_bad_melee/creep_bad_melee.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				"1"
+		"Level"						"1"
+	
+		"ArmorPhysical"				"0"
+		"MagicalResistance"			"0"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"1"
+		"AttackDamageMax"			"1"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+		"ProjectileModel"			""
+		"ProjectileSpeed"			""
+	
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"
+		"AttributeStrengthGain"		"0"
+		"AttributeBaseIntelligence"	"0"
+		"AttributeIntelligenceGain"	"0"
+		"AttributeBaseAgility"		"0"
+		"AttributeAgilityGain"		"0"
+	
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"
+		"RingRadius"				"45"
+		"HealthBarOffset"			"130"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"100"
+		"MovementTurnRate"			"0.5"
+	
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+	
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+		"VisionDaytimeRange"		"850"
+				"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"0"
+		"MagicalResistance"			"0"
+		"AttackDamageMin"			"1"
+		"AttackDamageMax"			"1"
+		"AttackRate"				"1"
+	
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+		"MovementSpeed"				"100"
+		"StatusHealth"				"100"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+	}
+	"npc_dota_unit_hlw_level1"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_b/n_creep_kobold_b.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".9"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"1"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackRange"				"100"
+		"AttackAcquisitionRange"	"500"
+		"RingRadius"				"40"
+		"HealthBarOffset"			"150"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_HERO"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"1"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"110"
+	 
+		"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level10"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_golem_b/n_creep_golem_b.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				"1.1"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"10"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"10"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"200"
+	
+		"Ability1"	"hlw_creep_armor_1"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level11"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_c/n_creep_kobold_c.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".9"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"11"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"40"
+		"HealthBarOffset"			"130"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"11"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"210"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level12"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_c/n_creep_satyr_c.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".8"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"12"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
+		"HealthBarOffset"			"190"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"12"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"220"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level13"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_ghost_a/n_creep_ghost_a.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".9"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"13"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"45"
+		"HealthBarOffset"			"190"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"13"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"230"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level14"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_ogre_lrg/n_creep_ogre_lrg.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".9"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"14"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"60"
+		"HealthBarOffset"			"210"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"14"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"240"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level15"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_centaur_lrg/n_creep_centaur_lrg.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				"1"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"15"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"80"
+		"HealthBarOffset"			"220"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"15"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"250"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level16"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_worg_large/n_creep_worg_large.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".9"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"16"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"70"
+		"HealthBarOffset"			"160"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"16"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"260"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level17"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_forest_trolls/n_creep_forest_troll_high_priest.vmdl"
+		"SoundSet"					"n_creep_Ranged"
+		"ModelScale" 				".9"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"17"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"600"
+		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf"
+		"ProjectileSpeed"			"900"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
+		"HealthBarOffset"			"170"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"17"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"270"
+	 
+	
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level18"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_harpy_b/n_creep_harpy_b.vmdl"
+		"SoundSet"					"n_creep_Ranged"
+		"ModelScale" 				".925"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"18"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"600"
+		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf"
+		"ProjectileSpeed"			"900"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
+		"HealthBarOffset"			"190"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"18"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"280"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level19"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_vulture_b/n_creep_vulture_b.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".8"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"19"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
+		"HealthBarOffset"			"170"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"19"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"290"
+	
+		"Ability1"	"hlw_creep_magicresist_2"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level2"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_forest_trolls/n_creep_forest_troll_berserker.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".90"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"2"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackRange"				"100"
+		"AttackAcquisitionRange"	"500"
+		"RingRadius"				"50"
+		"HealthBarOffset"			"160"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"2"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"120"
+	 
+		"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level20"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_beast/n_creep_beast.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".8"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"20"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
+		"HealthBarOffset"			"180"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"20"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"300"
+	
+		"Ability1"	"hlw_creep_armor_2"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level21"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_a/n_creep_kobold_a.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				"1"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"21"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
+		"HealthBarOffset"			"180"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"21"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"310"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level22"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_furbolg/n_creep_furbolg_disrupter.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".95"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"22"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"70"
+		"HealthBarOffset"			"215"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+	
+		"ArmorPhysical"				"22"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"320"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level23"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_vulture_a/n_creep_vulture_a.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				"1.1"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"23"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
+		"HealthBarOffset"			"220"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"23"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"330"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level24"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_black_drake/n_creep_black_drake.vmdl"
+		"SoundSet"					"n_creep_Ranged"
+		"ModelScale" 				".6"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"24"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"600"
+		"ProjectileModel"			"particles/neutral_fx/black_drake_attack.vpcf"
+		"ProjectileSpeed"			"900"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"70"
+		"HealthBarOffset"			"300"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"24"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"340"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level25"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_black_dragon/n_creep_black_dragon.vmdl"
+		"SoundSet"					"n_creep_Ranged"
+		"ModelScale" 				"1"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"25"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"600"
+		"ProjectileModel"			"particles/neutral_fx/black_dragon_attack.vpcf"
+		"ProjectileSpeed"			"900"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"70"
+		"HealthBarOffset"			"300"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"25"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"350"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level26"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_small.vmdl"
+		"SoundSet"					"n_creep_Ranged"
+		"ModelScale" 				".65"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"26"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"600"
+		"ProjectileModel"			"particles/neutral_fx/thunderlizard_base_attack.vpcf"
+		"ProjectileSpeed"			"800"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"70"
+		"HealthBarOffset"			"220"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"26"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"360"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level27"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_big.vmdl"
+		"SoundSet"					"n_creep_Ranged"
+		"ModelScale" 				".8"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"27"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"600"
+		"ProjectileModel"			"particles/neutral_fx/thunderlizard_base_attack.vpcf"
+		"ProjectileSpeed"			"900"	
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"90"
+		"HealthBarOffset"			"240"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"27"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"370"
+	
+	 
+	
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level28"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/items/lone_druid/viciouskraitpanda/viciouskrait_panda.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				"0.9"
+		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"28"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"70"
+		"HealthBarOffset"			"200"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"28"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"380"
+	
+		"Ability1"	"hlw_creep_magicresist_3"
+	 
+		"precache"
+	 	{
+	 		"model"						"models/items/lone_druid/viciouskraitpanda/viciouskrait_panda.vmdl"
+		}
+		"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level29"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_jungle_stalker/n_creep_gargoyle_jungle_stalker.vmdl"
+		"SoundSet"					"n_creep_Ranged"
+		"ModelScale" 				"0.7"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"29"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"80"
+		"HealthBarOffset"			"220"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"29"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"390"
+	
+		"Ability1"	"hlw_creep_armor_3"
+	 
+	 	"precache"
+	 	{
+	 		"model"						"models/creeps/neutral_creeps/n_creep_jungle_stalker/n_creep_gargoyle_jungle_stalker.vmdl"
+	 	}
+		"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level3"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_ghost_b/n_creep_ghost_b.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".90"
+		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"3"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackRange"				"100"
+		"AttackAcquisitionRange"	"500"
+		"RingRadius"				"35"
+		"HealthBarOffset"			"175"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"3"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"130"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level30"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/nian/nian_creep.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".45"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"30"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
+		"HealthBarOffset"			"220"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"30"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"400"
+	
+		"Ability1"	"hlw_creep_armor_4"
+		"Ability2"	"hlw_creep_magicresist_4"
+	 
+	 	"precache"
+	 	{
+	 		"model"						"models/creeps/nian/nian_creep.vmdl"
+		}
+		"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level31"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models\creeps\roshan\roshan.vmdl"
+		"SoundSet"					"Roshan"
+	
+		"ModelScale" 				"1.4"
+		"Level"						"99"
+		"IsAncient"					"1"
+		"IsConsideredHero"			"0"
+	
+		"ArmorPhysical"				"30"
+		"MagicalResistance"			"30"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"500"
+		"AttackDamageMax"			"500"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"0.5"
+		"AttackAnimationPoint"		"0.1"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"128"
+	
+		"BountyXP"					"20000"
+		"BountyGoldMin"				"30000"
+		"BountyGoldMax"				"50000"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
+		"RingRadius"				"110"
+		"HealthBarOffset"			"500"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"500"
+		"MovementTurnRate"			"1"
+	
+		"StatusHealth"				"100000"
+		"StatusHealthRegen"			"1000"
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_LIGHT"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	 
+	}
+	"npc_dota_unit_hlw_level4"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_worg_small/n_creep_worg_small.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".90"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"4"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackRange"				"100"
+		"AttackAcquisitionRange"	"500"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"45"
+		"HealthBarOffset"			"130"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"4"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"140"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level5"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_harpy_a/n_creep_harpy_a.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".85"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"5"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackRange"				"100"
+		"AttackAcquisitionRange"	"500"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
+		"HealthBarOffset"			"180"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"5"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"150"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level6"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_centaur_med/n_creep_centaur_med.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				"1"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"6"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackRange"				"100"
+		"AttackAcquisitionRange"	"500"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"50"
+		"HealthBarOffset"			"180"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"6"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"160"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level7"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll.vmdl"
+		"SoundSet"					"n_creep_Ranged"
+		"ModelScale" 				".90"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"7"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackRange"				"600"
+		"AttackAcquisitionRange"	"500"
+		"ProjectileModel"			"particles/neutral_fx/gnoll_base_attack.vpcf"
+		"ProjectileSpeed"			"900"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"40"
+		"HealthBarOffset"			"170"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"7"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"170"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level8"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_b/n_creep_satyr_b.vmdl"
+		"SoundSet"					"n_creep_Ranged"
+		"ModelScale" 				".7"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"8"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackRange"				"600"
+		"AttackAcquisitionRange"	"500"
+		"ProjectileModel"			"particles/neutral_fx/satyr_trickster_projectile.vpcf"
+		"ProjectileSpeed"			"900"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"60"
+		"HealthBarOffset"			"210"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"8"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"180"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	"npc_dota_unit_hlw_level9"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/creeps/neutral_creeps/n_creep_ogre_med/n_creep_ogre_med.vmdl"
+		"SoundSet"					"n_creep_Melee"
+		"ModelScale" 				".9"
+		"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"9"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackAnimationPoint"		"0.4"
+		"AttackAcquisitionRange"	"500"
+		"AttackRange"				"100"
+	
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+		"RingRadius"				"60"
+		"HealthBarOffset"			"190"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"		"100"
+		"MovementTurnRate"			"0.5"
+	
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"VisionDaytimeRange"		"850"
+		"VisionNighttimeRange"		"800"
+	
+		"ArmorPhysical"				"9"
+		"MagicalResistance"			"15"
+		"MovementSpeed"				"190"
+	
+		"Ability1"	"hlw_creep_magicresist_1"
+	 
+			"Creature"
+		{
+			"CanRespawn"				"0"
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+					"RoamDistance"		"150.0"
+				}
+			}
+			"DefaultState"				"Invade"
+	
+			"DisableClumpingBehavior"	"1"
+		}
+	}
+	// Venomancer Scourge Wards
+	"npc_dota_venomancer_scourge_ward_1"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_venomancer_plagueward"	// Class of entity of link to.
+		"Model"						"models/heroes/venomancer/venomancer_ward.vmdl"	// Model.
+		"SoundSet"					"Hero_VenomancerWard"					// Name of sound set.
+		"Level"						"1"
+		"ModelScale" 				"1.2"
+		"SelectionGroup"			"Venomancer_Wards_Scourge"
+	
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"holdout_scourge_venomous_gale"			// Ability 1.
+		"Ability2"					""			// Ability 2.
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+	
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+	
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"19"			// Damage range min.
+		"AttackDamageMax"			"21"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_venomancer/venomancer_plague_ward_projectile.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1900"		// Speed of projectile.
+	
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"			// Hull type used for navigation/locomotion.
+		"HealthBarOffset"			"170"
+	
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
+		"MovementSpeed"				"0"			// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+	
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"20"		// Experience earn.
+		"BountyGoldMin"				"14"		// Gold earned min.
+		"BountyGoldMax"				"17"		// Gold earned max.
+	
+			// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"150"		// Base health.
+		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.
+	
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1200"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+	
+		//Inventory
+		"HasInventory"				"0"
+	}
+	"npc_dota_venomancer_scourge_ward_2"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_venomancer_plagueward"	// Class of entity of link to.
+		"Model"						"models/heroes/venomancer/venomancer_ward.vmdl"	// Model.
+		"SoundSet"					"Hero_VenomancerWard"					// Name of sound set.
+		"Level"						"1"
+		"ModelScale" 				"1.2"
+		"SelectionGroup"			"Venomancer_Wards_Scourge"
+	
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"holdout_scourge_venomous_gale"			// Ability 1.
+		"Ability2"					""			// Ability 2.
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+	
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+	
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"27"		// Damage range min.
+		"AttackDamageMax"			"31"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_venomancer/venomancer_plague_ward_projectile.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1900"		// Speed of projectile.
+	
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"			// Hull type used for navigation/locomotion.
+		"HealthBarOffset"			"170"
+	
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
+		"MovementSpeed"				"0"			// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+	
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"25"		// Experience earn.
+		"BountyGoldMin"				"14"		// Gold earned min.
+		"BountyGoldMax"				"17"		// Gold earned max.
+	
+			// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"300"		// Base health.
+		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.
+	
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1200"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+	
+		//Inventory
+		"HasInventory"				"0"
+	}
+	"npc_dota_venomancer_scourge_ward_3"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_venomancer_plagueward"	// Class of entity of link to.
+		"Model"						"models/heroes/venomancer/venomancer_ward.vmdl"	// Model.
+		"SoundSet"					"Hero_VenomancerWard"					// Name of sound set.
+		"Level"						"1"
+		"ModelScale" 				"1.2"
+		"SelectionGroup"			"Venomancer_Wards_Scourge"
+	
+	
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"holdout_scourge_venomous_gale"			// Ability 1.
+		"Ability2"					""			// Ability 2.
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+	
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+	
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"36"		// Damage range min.
+		"AttackDamageMax"			"42"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_venomancer/venomancer_plague_ward_projectile.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1900"		// Speed of projectile.
+	
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"			// Hull type used for navigation/locomotion.
+		"HealthBarOffset"			"170"
+	
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
+		"MovementSpeed"				"0"			// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+	
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"30"		// Experience earn.
+		"BountyGoldMin"				"14"		// Gold earned min.
+		"BountyGoldMax"				"17"		// Gold earned max.
+	
+			// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"450"		// Base health.
+		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.
+	
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1200"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+	
+		//Inventory
+		"HasInventory"				"0"
+	}
+	"npc_dota_venomancer_scourge_ward_4"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"					"npc_dota_venomancer_plagueward"	// Class of entity of link to.
+		"Model"						"models/heroes/venomancer/venomancer_ward.vmdl"	// Model.
+		"SoundSet"					"Hero_VenomancerWard"					// Name of sound set.
+		"Level"						"1"
+		"ModelScale" 				"1.2"
+		"SelectionGroup"			"Venomancer_Wards_Scourge"
+	
+	
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"holdout_scourge_venomous_gale"			// Ability 1.
+		"Ability2"					""			// Ability 2.
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+	
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+	
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"44"		// Damage range min.
+		"AttackDamageMax"			"52"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_venomancer/venomancer_plague_ward_projectile.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1900"		// Speed of projectile.
+	
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_REGULAR"			// Hull type used for navigation/locomotion.
+		"HealthBarOffset"			"170"
+	
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
+		"MovementSpeed"				"0"			// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+	
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"35"		// Experience earn.
+		"BountyGoldMin"				"14"		// Gold earned min.
+		"BountyGoldMax"				"17"		// Gold earned max.
+	
+			// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"600"		// Base health.
+		"StatusHealthRegen"			"0.25"		// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.
+	
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1200"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+	
+		//Inventory
+		"HasInventory"				"0"
+	}
+	//CUSTOM UNITS FOR HERO LINE WARS
+	"npc_dummy_unit"
+	{
+		// General
+		//
+		"BaseClass"				 "npc_dota_base_additive"	// Class of entity of link to.
+		"Model"					 "models/development/invisiblebox.vmdl"	// Model.
+		"SoundSet"					"Creep_Good_Range"					// Name of sound set.
+		"Level"					 "0"
+		"UnitLabel"				 "healing_ward"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		
+		"Ability1"					"dummy_unit"		 // Ability 1.
+		"Ability2"					""			// Ability 2.
+		"Ability3"					""			// Ability 3.
+		"Ability4"					""			// Ability 4.
+		"Ability5"					""			// Ability 5.
+		"Ability6"					""			// Ability 6 - Extra.
+		"Ability7"					""			// Ability 7 - Extra.
+		"Ability8"					""			// Ability 8 - Extra.
+	
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"			 "0"		 // Physical protection.
+		"MagicalResistance"			 "0"		 // Magical protection.
+	
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"		 // Type of attack - melee, ranged, etc.
+		"AttackDamageMin"		 "0"		 // Damage range min.
+		"AttackDamageMax"		 "0"		 // Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1"		 // Speed of attack.
+		"AttackAnimationPoint"		"0.5"	 // Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"800"	 // Range within a target can be acquired.
+		"AttackRange"			 "500"	 // Range within a target can be attacked.
+		"ProjectileModel"		 "" // Particle system model for projectile.
+		"ProjectileSpeed"		 "900"	 // Speed of projectile.
+	
+		// Attributes
+		//----------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"	 "0"		 // Base strength
+		"AttributeStrengthGain"	 "0"		 // Strength bonus per level.
+		"AttributeBaseIntelligence" "0"		 // Base intelligence
+		"AttributeIntelligenceGain" "0"		 // Intelligence bonus per level.
+		"AttributeBaseAgility"		"0"		 // Base agility
+		"AttributeAgilityGain"		"0"		 // Agility bonus per level.
+	
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"		 // Experience earn.
+		"BountyGoldMin"			 "0"		 // Gold earned min.
+		"BountyGoldMax"			 "0"		 // Gold earned max.
+	
+		// Bounds
+		//----------------------------------------------------------------
+	
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"		 // Type of locomotion - ground, air
+		"MovementSpeed"			 "450"	 // Speed
+		"MovementTurnRate"			"1.0"	 // Turning rate.
+		"FollowRange"			 "250"	 // Distance to keep when following
+	
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1"		 // Base health.
+		"StatusHealthRegen"		 "0"		 // Health regeneration rate.
+		"StatusMana"				"0"		 // Base mana.
+		"StatusManaRegen"		 "0"		 // Mana regeneration rate.
+	
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
+		"CombatClassAttack"		 "DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"		 "DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"	 "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"0"	 // Range of vision during day light.
+		"VisionNighttimeRange"		"0"	 // Range of vision at night time.
+	
+		// Bots
+		//----------------------------------------------------------------
+		"AttackDesire"				"1.5"	 // How much bots want to attack them vs other non-hero things
+	} 
+	"npc_hlw_controller_nonhero"
+	{
+		"BaseClass"				 "npc_dota_creature"	// Class of entity of link to.
+		"precache"
+		{
+			"model"					"models/courier/donkey_crummy_wizard_2014/donkey_crummy_wizard_2014.vmdl"
+		}
+		"Model"						"models/courier/donkey_crummy_wizard_2014/donkey_crummy_wizard_2014.vmdl"
+	
+		"MinimapIcon"				"minimap_courier"
+	
+		"AbilityLayout"				"6"
+		"Ability1"					"hlw_controller_sunstrike"
+		"Ability2"					"hlw_controller_arc_lightning"
+		"Ability3"					"hlw_controller_crushing_wave"
+		"Ability4"					"hlw_controller_blizzard"
+		"Ability5"					"hlw_controller_moonsoon"
+		"Ability6"					"hlw_controller_cyclone"
+		
+		"ArmorPhysical"				"0"
+		"MagicalResistance"			"0"
+	
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"0"
+		"AttackDamageMax"			"0"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"0"
+		"AttackAnimationPoint"		"0"
+		"AttackAcquisitionRange"	"0"
+		"AttackRange"				"0"
+	
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"0"
+		"AttributeStrengthGain"		"0"
+		"AttributeBaseIntelligence"	"0"
+		"AttributeIntelligenceGain"	"0"
+		"AttributeBaseAgility"		"0"
+		"AttributeAgilityGain"		"0"
+	
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+	
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"			 	"200"
+		"MovementTurnRate"			"1.0"
+		"FollowRange"			 	"250"
+		"StatusHealth"				"1"
+		"StatusHealthRegen"			"0"
+		"StatusMana"				"1000"
+		"StatusManaRegen"			"2"
+		
+		"VisionDaytimeRange"		"3000"
+		"VisionNighttimeRange"		"3000"
+	
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	} 
+	//
+	//PRECACHE EVERYTHING
+	//
+	
+	"npc_precache_everything"
+	{
+		"BaseClass"					"npc_dota_creep"
+	
+		"precache"
+		{
+			"model"		"models\creeps\neutral_creeps\n_creep_kobold\kobold_a\n_creep_kobold_a.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_kobold\kobold_b\n_creep_kobold_b.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_kobold\kobold_c\n_creep_kobold_c.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_forest_trolls\n_creep_forest_troll_high_priest.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_forest_trolls\n_creep_forest_troll_berserker.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_ghost_a\n_creep_ghost_a.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_kobold\kobold_c\n_creep_kobold_frost.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_harpy_a\n_creep_harpy_a.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_harpy_b\n_creep_harpy_b.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_ghost_b\n_creep_ghost_frost.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_satyr_a\n_creep_satyr_a.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_centaur_med\n_creep_centaur_med.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_furbolg\n_creep_furbolg_disrupter.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_satyr_b\n_creep_satyr_b.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_golem_a\neutral_creep_golem_a.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_ogre_lrg\n_creep_ogre_lrg.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_satyr_c\n_creep_satyr_c.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_centaur_lrg\n_creep_centaur_lrg.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_beast\n_creep_beast.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_worg_large\n_creep_worg_large.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_dragonspawn_a\n_creep_dragonspawn_a.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_dragon_med\n_creep_dragon_med.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_dragonspawn_a\n_creep_dragonspawn_a.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_thunder_lizard\n_creep_thunder_lizard_small.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_dragon_lrg\n_creep_dragon_lrg.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_black_dragon\n_creep_black_dragon.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_thunder_lizard\n_creep_thunder_lizard_big.vmdl"
+			"model"		"models\creeps\neutral_creeps\n_creep_dragonspawn_b\n_creep_dragonspawn_b.vmdl"
+			"model"		"models\creeps\lane_creeps\wizard\wizard.vmdl"
+	
+			"particlefile"	"particles/units/heroes/hero_zuus.pcf"
+			"particlefile"	"particles/units/heroes/hero_alchemist.pcf"
+			"particlefile"	"particles/units/heroes/hero_elder_titan.pcf"
+			"particlefile"	"particles/units/heroes/hero_jakiro.pcf"
+			"particlefile"	"particles/units/heroes/hero_invoker.pcf"
+			"particlefile"	"particles/units/heroes/hero_juggernaut.pcf"
+			"particlefile"	"particles/units/heroes/hero_omniknight.pcf"
+	
+			"particlefile"	"particles/frostivus_gameplay.pcf"
+			"particlefile"	"particles/frostivus_herofx.pcf"
+			"particlefile"	"particles/holdout_lina.pcf"
+	
+			"soundfile"	"scripts/game_sounds_heroes/game_sounds_zuus.txt"
+			"soundfile"	"scripts/game_sounds_heroes/game_sounds_invoker.txt"
+			"soundfile"	"scripts/game_sounds_heroes/game_sounds_elder_titan.txt"
+			"soundfile"	"scripts/game_sounds_heroes/game_sounds_alchemist.txt"
+			"soundfile"	"scripts/game_sounds_heroes/game_sounds_jakiro.txt"
+			"soundfile"	"scripts/game_sounds_heroes/game_sounds_juggernaut.txt"
+	
+			"soundfile"	"scripts/game_sounds_custom.txt"
+		}
+	}
+}

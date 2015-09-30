@@ -1,0 +1,108 @@
+// No spaces in event names, max length 32
+// All strings are case sensitive
+//
+// valid data key types are:
+//   string : a zero terminated string
+//   bool   : unsigned int, 1 bit
+//   byte   : unsigned int, 8 bit
+//   short  : signed int, 16 bit
+//   long   : signed int, 32 bit
+//   float  : float, 32 bit
+//   uint64 : unsigned int 64 bit
+//   local  : any data, but not networked to clients
+//
+// following key names are reserved:
+//   local      : if set to 1, event is not networked to clients
+//   unreliable : networked, but unreliable
+//   suppress   : never fire this event
+//   time	: firing server time
+//   eventid	: holds the event ID
+
+"CustomEvents"
+{
+	// This is fired when a client asks for the state (once they have joined)
+	// The data is encoded differently depending on the stat
+
+	"hlw_initialize_interface"
+	{
+		//PlayerID of the player that opened the interface
+		"nPlayerID"	"short"
+		//maximum creep charges
+		"nMaxCharges"	"short"
+		//Creeps per controller level
+		"nCreepsPerLevel"	"short"
+		//Level of the controller
+		"nControllerLevel" "short"
+		//Max controller level
+		"nMaxControllerLevel"	"short"
+		//Current player income
+		"nIncome"	"short"
+		//Time between income
+		"nIncomeSeconds" "short"
+		//Controller Upgrade Cost
+		"nUpgradeCosts"	"string"
+		//CreepCost
+		"nCreepCosts"	"string"
+		//If interface is disabled because there are too many creeps in the other lanes
+		"nTooManyCreeps"	"bool"
+	}
+
+	"hlw_enable_interface"
+	{
+	}
+
+	"hlw_close_interface"
+	{
+	}
+
+	"hlw_upgrade_controller"
+	{
+		//PlayerID of the player that upgraded the controller
+		"nPlayerID"	"short"
+		//new level of the controller, determines which set of creeps he can spawn
+		"nControllerLevel" "short"
+	}
+	//Used to populate the income list
+	"hlw_update_player_name"
+	{
+		//Player ID that gets a new name
+		"nPlayerID" "short"
+		//Team the player is on
+		"nPlayerTeam"	"byte"
+	}
+	//Fired any time player income changes
+	"hlw_update_player_income"
+	{
+		//Player ID that has gained (or lost?) income
+		"nPlayerID" "short"
+		//New income as a float, but gold is only given for every full gold of income; should probably only display rounded income
+		"nIncome"	"float"
+	}
+	//Fired every time players get income
+	"hlw_income"
+	{
+	}
+	//updates the charges a player has left
+	"hlw_update_creep_charges"
+	{
+		"nPlayerID"	"short"
+		"nCreepCharges"	"string"
+	}
+	"hlw_add_creep_charges"
+	{
+	}
+	"hlw_update_single_creep_charge"
+	{
+		"nPlayerID"	"short"
+		"nCreepLevel"	"short"
+		"nCreepCharge"	"short"
+	}
+	"hlw_too_many_creeps"
+	{
+		"nPlayerID"	"short"
+	}
+	"hlw_reduced_creeps"
+	{
+		"nPlayerID"	"short"
+	}
+}

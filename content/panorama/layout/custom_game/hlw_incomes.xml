@@ -1,0 +1,44 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/hlw_income.css" />
+	</styles>
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/hlw_income.js" />
+    </scripts>
+    <Panel class="root" hittest="false">
+		<Panel class="Collapse">
+			<Panel class="CollapseButtonBorder"/>
+			<Button class="CollapseButtonContainer" onactivate="Collapse()" />
+			<Label id="CollapseLabel" class="TitleLabel" text="Collapse" hittest="false"/>
+		</Panel>
+		
+
+		<Panel class="IncomeColumn" id="IncomesHighestParent" hittest="false">
+			<Panel>
+				<Panel class="IncomeTeamBorder" hittest="false" />
+				<Panel id="RadiantIncomes" class="IncomeTeam" hittest="false" />
+				<Label id="RadiantIncomesLabel" class="TitleLabel" text="Radiant Incomes" hittest="false"/>
+				<Panel id="Team_2_Players" class="PlayerContainer" hittest="false">
+				
+				</Panel>
+			</Panel>
+			
+			<Panel>
+				<Panel class="IncomeTeamBorder" />
+				<Panel id="DireIncomes" class="IncomeTeam" hittest="false"/>
+				<Label id="DireIncomesLabel" class="TitleLabel" text="Dire Incomes" hittest="false"/>
+				<Panel id="Team_3_Players" class="PlayerContainer" hittest="false">
+				
+				</Panel>				
+			</Panel>
+			
+			<Panel>
+				<Panel class="GoldBarBorder" hittest="false"/>
+				<Panel class="GoldBarBox" hittest="false" />          
+				<Panel id="GoldBarMargin" hittest="false">
+					<Panel id="GoldBar" hittest="false" />
+				</Panel>
+			</Panel>
+		</Panel>	
+	</Panel>
+</root>

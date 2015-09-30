@@ -1,0 +1,1218 @@
+
+// Dota Abilities Override File
+"DOTAAbilities"
+{
+	"Version"	 "1"
+	
+	// -----------------------------------------------------------
+	// - Epitaque's adjusted abilities  -
+	// -----------------------------------------------------------
+	"windrunner_windrun"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movespeed_bonus_pct"		"50 50 50 50"		
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"evasion_pct_tooltip"		"10 15 20 30"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"enemy_movespeed_bonus_pct"	"-8 -16 -24 -30"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"300 300 300 300"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"3 4 5 6"
+			}
+		}
+	}
+	
+	"ember_spirit_sleight_of_fist"
+	{
+		"AbilityCooldown"				"25.0 20.0 15.0 10.0"
+		"AbilityManaCost"				"100"
+	}
+
+	//=================================================================================================================
+	// Recipe: Greater Crit
+	//=================================================================================================================
+	"item_recipe_greater_crit"
+	{
+		"ItemCost"						"2500"
+		"ItemRequirements"
+		{
+			"01"						"item_lesser_crit;item_demon_edge"
+		}
+	}
+
+	// -----------------------------------------------------------
+	// - UNCOMMENT ANY ITEM YOU DON'T WANT TO APPEAR IN THE SHOP -
+	// -----------------------------------------------------------
+	
+	//"item_blink"			"REMOVE"
+	//"item_blades_of_attack"		 "REMOVE"
+	//"item_broadsword"		 "REMOVE"
+	//"item_chainmail"			"REMOVE"
+	//"item_claymore"		 "REMOVE"
+	//"item_helm_of_iron_will"			"REMOVE"
+	//"item_javelin"			"REMOVE"
+	//"item_mithril_hammer"		 "REMOVE"
+	//"item_platemail"			"REMOVE"
+	//"item_quarterstaff"		 "REMOVE"
+	//"item_quelling_blade"		 "REMOVE"
+	//"item_ring_of_protection"		 "REMOVE"
+	//"item_stout_shield"		 "REMOVE"
+	//"item_gauntlets"			"REMOVE"
+	//"item_slippers"		 "REMOVE"
+	//"item_mantle"		 "REMOVE"
+	//"item_branches"		 "REMOVE"
+	//"item_belt_of_strength"		 "REMOVE"
+	//"item_boots_of_elves"		 "REMOVE"
+	//"item_robe"		 "REMOVE"
+	//"item_circlet"			"REMOVE"
+	//"item_ogre_axe"		 "REMOVE"
+	//"item_blade_of_alacrity"			"REMOVE"
+	//"item_staff_of_wizardry"			"REMOVE"
+	//"item_ultimate_orb"		 "REMOVE"
+	//"item_gloves"		 "REMOVE"
+	//"item_lifesteal"			"REMOVE"
+	//"item_ring_of_regen"			"REMOVE"
+	//"item_sobi_mask"			"REMOVE"
+	//"item_boots"			"REMOVE"
+	"item_gem"			"REMOVE"
+	//"item_cloak"			"REMOVE"
+	//"item_talisman_of_evasion"			"REMOVE"
+	//"item_cheese"		 "REMOVE"
+	//"item_magic_stick"			"REMOVE"
+	//"item_recipe_magic_wand"			"REMOVE"
+	//"item_magic_wand"		 "REMOVE"
+	//"item_ghost"			"REMOVE"
+	//"item_clarity"			"REMOVE"
+	//"item_flask"			"REMOVE"
+	"item_dust"		 "REMOVE"
+	//"item_bottle"		 "REMOVE"
+	//"item_ward_observer"			"REMOVE"
+	//"item_ward_sentry"			"REMOVE"
+	//"item_tango"			"REMOVE"
+	//"item_tango_single"		 "REMOVE"
+	//"item_courier"			"REMOVE"
+	//"item_tpscroll"		 "REMOVE"
+	"item_recipe_travel_boots"			"REMOVE"
+	"item_travel_boots"		 "REMOVE"
+	//"item_recipe_phase_boots"		 "REMOVE"
+	//"item_phase_boots"			"REMOVE"
+	//"item_demon_edge"		 "REMOVE"
+	//"item_eagle"			"REMOVE"
+	//"item_reaver"		 "REMOVE"
+	//"item_relic"			"REMOVE"
+	//"item_hyperstone"		 "REMOVE"
+	//"item_ring_of_health"		 "REMOVE"
+	//"item_void_stone"		 "REMOVE"
+	//"item_mystic_staff"		 "REMOVE"
+	//"item_energy_booster"		 "REMOVE"
+	//"item_point_booster"			"REMOVE"
+	//"item_vitality_booster"		 "REMOVE"
+	//"item_recipe_power_treads"			"REMOVE"
+	//"item_power_treads"		 "REMOVE"
+	//"item_recipe_hand_of_midas"		 "REMOVE"
+	//"item_hand_of_midas"			"REMOVE"
+	//"item_recipe_oblivion_staff"			"REMOVE"
+	//"item_oblivion_staff"		 "REMOVE"
+	//"item_recipe_pers"			"REMOVE"
+	//"item_pers"		 "REMOVE"
+	//"item_recipe_poor_mans_shield"			"REMOVE"
+	//"item_poor_mans_shield"		 "REMOVE"
+	//"item_recipe_bracer"			"REMOVE"
+	//"item_bracer"		 "REMOVE"
+	//"item_recipe_wraith_band"		 "REMOVE"
+	//"item_wraith_band"			"REMOVE"
+	//"item_recipe_null_talisman"		 "REMOVE"
+	//"item_null_talisman"			"REMOVE"
+	//"item_recipe_mekansm"		 "REMOVE"
+	//"item_mekansm"			"REMOVE"
+	//"item_recipe_vladmir"		 "REMOVE"
+	//"item_vladmir"			"REMOVE"
+	//"item_flying_courier"		 "REMOVE"
+	//"item_recipe_buckler"		 "REMOVE"
+	//"item_buckler"			"REMOVE"
+	//"item_recipe_ring_of_basilius"			"REMOVE"
+	//"item_ring_of_basilius"		 "REMOVE"
+	//"item_recipe_pipe"			"REMOVE"
+	//"item_pipe"		 "REMOVE"
+	"item_recipe_urn_of_shadows"			"REMOVE"
+	"item_urn_of_shadows"		 "REMOVE"
+	//"item_recipe_headdress"		 "REMOVE"
+	//"item_headdress"			"REMOVE"
+	//"item_recipe_sheepstick"			"REMOVE"
+	//"item_sheepstick"		 "REMOVE"
+	//"item_recipe_orchid"			"REMOVE"
+	//"item_orchid"		 "REMOVE"
+	//"item_recipe_cyclone"		 "REMOVE"
+	//"item_cyclone"			"REMOVE"
+	//"item_recipe_force_staff"		 "REMOVE"
+	//"item_force_staff"			"REMOVE"
+	//"item_recipe_dagon"		 "REMOVE"
+	//"item_recipe_dagon_2"		 "REMOVE"
+	//"item_recipe_dagon_3"		 "REMOVE"
+	//"item_recipe_dagon_4"		 "REMOVE"
+	//"item_recipe_dagon_5"		 "REMOVE"
+	//"item_dagon"			"REMOVE"
+	//"item_dagon_2"			"REMOVE"
+	//"item_dagon_3"			"REMOVE"
+	//"item_dagon_4"			"REMOVE"
+	//"item_dagon_5"			"REMOVE"
+	//"item_recipe_necronomicon"			"REMOVE"
+	//"item_recipe_necronomicon_2"			"REMOVE"
+	//"item_recipe_necronomicon_3"			"REMOVE"
+	//"item_necronomicon"		 "REMOVE"
+	//"item_necronomicon_2"		 "REMOVE"
+	//"item_necronomicon_3"		 "REMOVE"
+	//"item_recipe_ultimate_scepter"			"REMOVE"
+	//"item_ultimate_scepter"		 "REMOVE"
+	//"item_recipe_refresher"		 "REMOVE"
+	//"item_refresher"			"REMOVE"
+	//"item_recipe_assault"		 "REMOVE"
+	//"item_assault"			"REMOVE"
+	//"item_recipe_heart"		 "REMOVE"
+	//"item_heart"			"REMOVE"
+	//"item_recipe_black_king_bar"			"REMOVE"
+	//"item_black_king_bar"		 "REMOVE"
+	//"item_aegis"			"REMOVE"
+	//"item_recipe_shivas_guard"			"REMOVE"
+	//"item_shivas_guard"		 "REMOVE"
+	//"item_recipe_bloodstone"			"REMOVE"
+	//"item_bloodstone"		 "REMOVE"
+	//"item_recipe_sphere"			"REMOVE"
+	//"item_sphere"		 "REMOVE"
+	//"item_recipe_reflex_energy_regen_booster"		 "REMOVE"
+	//"item_vanguard"		 "REMOVE"
+	//"item_recipe_blade_mail"			"REMOVE"
+	//"item_blade_mail"		 "REMOVE"
+	//"item_recipe_soul_booster"			"REMOVE"
+	//"item_soul_booster"		 "REMOVE"
+	//"item_recipe_hood_of_defiance"			"REMOVE"
+	//"item_hood_of_defiance"		 "REMOVE"
+	//"item_recipe_rapier"			"REMOVE"
+	//"item_rapier"		 "REMOVE"
+	//"item_recipe_monkey_king_bar"		 "REMOVE"
+	//"item_monkey_king_bar"			"REMOVE"
+	//"item_recipe_radiance"			"REMOVE"
+	//"item_radiance"		 "REMOVE"
+	//"item_recipe_butterfly"		 "REMOVE"
+	//"item_butterfly"			"REMOVE"
+	//"item_recipe_greater_crit"			"REMOVE"
+	//"item_greater_crit"		 "REMOVE"
+	//"item_recipe_basher"			"REMOVE"
+	//"item_basher"		 "REMOVE"
+	//"item_recipe_bfury"		 "REMOVE"
+	//"item_bfury"			"REMOVE"
+	//"item_recipe_manta"		 "REMOVE"
+	//"item_manta"			"REMOVE"
+	//"item_recipe_lesser_crit"		 "REMOVE"
+	//"item_lesser_crit"			"REMOVE"
+	//"item_recipe_armlet"			"REMOVE"
+	//"item_armlet"		 "REMOVE"
+	"item_recipe_invis_sword"		 "REMOVE"
+	"item_invis_sword"			"REMOVE"
+	//"item_recipe_sange_and_yasha"		 "REMOVE"
+	//"item_sange_and_yasha"			"REMOVE"
+	//"item_recipe_satanic"		 "REMOVE"
+	//"item_satanic"			"REMOVE"
+	//"item_recipe_mjollnir"			"REMOVE"
+	//"item_mjollnir"		 "REMOVE"
+	//"item_recipe_skadi"		 "REMOVE"
+	//"item_skadi"			"REMOVE"
+	//"item_recipe_sange"		 "REMOVE"
+	//"item_sange"			"REMOVE"
+	//"item_recipe_helm_of_the_dominator"		 "REMOVE"
+	//"item_helm_of_the_dominator"			"REMOVE"
+	//"item_recipe_maelstrom"		 "REMOVE"
+	//"item_maelstrom"			"REMOVE"
+	//"item_recipe_desolator"		 "REMOVE"
+	//"item_desolator"			"REMOVE"
+	//"item_recipe_yasha"		 "REMOVE"
+	//"item_yasha"			"REMOVE"
+	//"item_recipe_mask_of_madness"		 "REMOVE"
+	//"item_mask_of_madness"			"REMOVE"
+	//"item_recipe_diffusal_blade"			"REMOVE"
+	//"item_recipe_diffusal_blade_2"			"REMOVE"
+	//"item_diffusal_blade"		 "REMOVE"
+	//"item_diffusal_blade_2"		 "REMOVE"
+	//"item_recipe_ethereal_blade"			"REMOVE"
+	//"item_ethereal_blade"		 "REMOVE"
+	//"item_recipe_soul_ring"		 "REMOVE"
+	//"item_soul_ring"			"REMOVE"
+	//"item_recipe_arcane_boots"			"REMOVE"
+	//"item_arcane_boots"		 "REMOVE"
+	//"item_orb_of_venom"		 "REMOVE"
+	//"item_recipe_ancient_janggo"			"REMOVE"
+	//"item_ancient_janggo"		 "REMOVE"
+	//"item_recipe_medallion_of_courage"			"REMOVE"
+	//"item_medallion_of_courage"		 "REMOVE"
+	//"item_smoke_of_deceit"			"REMOVE"
+	//"item_recipe_veil_of_discord"		 "REMOVE"
+	//"item_veil_of_discord"			"REMOVE"
+	//"item_recipe_rod_of_atos"		 "REMOVE"
+	//"item_rod_of_atos"			"REMOVE"
+	//"item_recipe_abyssal_blade"		 "REMOVE"
+	//"item_abyssal_blade"			"REMOVE"
+	"item_recipe_heavens_halberd"		 "REMOVE"
+	"item_heavens_halberd"			"REMOVE"
+	//"item_recipe_ring_of_aquila"			"REMOVE"
+	//"item_ring_of_aquila"		 "REMOVE"
+	//"item_recipe_tranquil_boots"			"REMOVE"
+	//"item_tranquil_boots"		 "REMOVE"
+	//"item_shadow_amulet"			"REMOVE"
+	
+	
+	//"item_halloween_candy_corn"		 "REMOVE"
+	//"item_mystery_hook"		 "REMOVE"
+	//"item_mystery_arrow"			"REMOVE"
+	//"item_mystery_missile"			"REMOVE"
+	//"item_mystery_toss"		 "REMOVE"
+	//"item_mystery_vacuum"		 "REMOVE"
+	//"item_halloween_rapier"		 "REMOVE"
+	//"item_greevil_whistle"			"REMOVE"
+	//"item_greevil_whistle_toggle"		 "REMOVE"
+	//"item_present"			"REMOVE"
+	//"item_winter_stocking"			"REMOVE"
+	//"item_winter_skates"			"REMOVE"
+	//"item_winter_cake"			"REMOVE"
+	//"item_winter_cookie"			"REMOVE"
+	//"item_winter_coco"			"REMOVE"
+	//"item_winter_ham"		 "REMOVE"
+	//"item_winter_kringle"		 "REMOVE"
+	//"item_winter_mushroom"			"REMOVE"
+	//"item_winter_greevil_treat"		 "REMOVE"
+	//"item_winter_greevil_garbage"		 "REMOVE"
+	//"item_winter_greevil_chewy"		 "REMOVE"
+	
+	//"item_recipe_moon_shard"			"REMOVE"
+	//"item_moon_shard"		 "REMOVE"	
+	//"item_enchanted_mango"			"REMOVE"	
+	"item_recipe_travel_boots_2"			"REMOVE"	
+	"item_travel_boots_2"		 "REMOVE"	
+	//"item_recipe_lotus_orb"		 "REMOVE"	
+	"item_lotus_orb"			"REMOVE"	
+	//"item_recipe_crimson_guard"		 "REMOVE"	
+	//"item_crimson_guard"			"REMOVE"	
+	"item_recipe_silver_edge"		 "REMOVE"	
+	"item_silver_edge"			"REMOVE"	
+	//"item_recipe_octarine_core"		 "REMOVE"	
+	//"item_octarine_core"			"REMOVE"	
+	"item_recipe_solar_crest"		 "REMOVE"	
+	"item_solar_crest"			"REMOVE"	
+	//"item_recipe_guardian_greaves"			"REMOVE"	
+	//"item_guardian_greaves"		 "REMOVE"	
+	//"item_recipe_glimmer_cape"			"REMOVE"	
+	"item_glimmer_cape"		 "REMOVE" 
+
+	// -----------------------------------------------------------
+	// - Secret shop items  -
+	// -----------------------------------------------------------
+	"item_platemail"
+	{
+		"SecretShop"					"0"
+	}
+	"item_hyperstone"
+	{
+		"SecretShop"					"0"
+	}
+	"item_ultimate_orb"
+	{
+		"SecretShop"					"0"
+	}
+	"item_energy_booster"
+	{
+		"SecretShop"					"0"
+	}
+	"item_vitality_booster"
+	{
+		"SecretShop"					"0"
+	}
+	"item_point_booster"
+	{
+		"SecretShop"					"0"
+	}
+	"item_soul_booster"
+	{
+		"SecretShop"					"0"
+	}
+	"item_demon_edge"
+	{
+		"SecretShop"					"0"
+	}
+	"item_mystic_staff"
+	{
+		"SecretShop"					"0"
+	}
+	"item_reaver"
+	{
+		"SecretShop"					"0"
+	}
+	"item_eagle"
+	{
+		"SecretShop"					"0"
+	}
+	"item_relic"
+	{
+		"SecretShop"					"0"
+	}
+	// -----------------------------------------------------------
+	// - Overridden items  -
+	// -----------------------------------------------------------
+	"item_radiance"
+	{
+		"blind_pct"				"0"
+	}
+
+	"item_flying_courier"
+	{
+		"ItemStockTime"					"2"
+	}
+	"item_recipe_veil_of_discord"
+	{
+		"ItemPurchasable"				"1"
+		"ItemCost"						""	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_veil_of_discord"
+		"ItemRequirements"
+		{
+			"01"						"item_helm_of_iron_will;item_null_talisman;item_mystic_staff"
+		}
+	}
+	"item_recipe_butterfly"
+	{
+		"ItemPurchasable"				"1"
+		"ItemCost"						"1800"	
+		"ItemShopTags"					""
+		
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_butterfly"
+		"ItemRequirements"
+		{
+			"01"						"item_quarterstaff;item_eagle"
+		}
+	}
+	"item_recipe_heavens_halberd"
+	{
+		"ItemPurchasable"				"0"
+		"ItemCost"						"1800"	
+		"ItemShopTags"					""
+		
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_heavens_halberd"
+		"ItemRequirements"
+		{
+			"01"						"item_sange"
+		}
+	}
+
+	"item_recipe_heart"
+	{
+		"ItemCost"						"2500"	
+	}
+
+	"item_recipe_bfury"
+	{
+		"ItemCost"						"2000"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_bfury"
+		"ItemRequirements"
+		{
+			"01"						"item_broadsword;item_pers;item_quelling_blade"
+		}
+	}
+	"item_veil_of_discord"
+	{
+		"AbilityCooldown"				"5"
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.0"
+
+		"AbilityManaCost"				"0"
+		"ItemCost"						"3675"
+		"ItemShopTags"					"int;armor;regen_health;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"vod;veil of discord"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"debuff_radius"			"1000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"resist_debuff"			"-60"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health_regen"	"20"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"50"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"10"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"10"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"20"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"10"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"resist_debuff_duration"	"50.0"
+			}
+		}
+	}
+	"item_bfury"
+	{
+		"ItemCost"						"7950"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"50"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health_regen"	"6"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana_regen"		"150"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cleave_damage_percent"	"30"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cleave_radius"			"200"
+			}
+		}
+	}
+	"item_rapier"
+	{
+		"ItemCost"						"6200"
+		"ItemShareability"				"ITEM_PARTIALLY_SHAREABLE"
+		"ItemSellable"					"1"
+		"ItemKillable"					"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"200"
+			}
+		}
+	}
+	"item_butterfly"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"60"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"			"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"60"
+			}
+		}
+	}
+	"item_heavens_halberd"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.0"
+
+		"AbilitySpecial"
+		{
+
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"				"0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maim_chance"			"30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maim_movement_speed"	"-50"
+			}			
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maim_attack_speed"		"-50"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"50"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"25"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"maim_duration"			"5.0"
+			}			
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"disarm_range"				"20"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"disarm_melee"				"20"
+			}				
+		}
+	}
+
+	"item_recipe_travel_boots"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+		"ItemResult"					""
+		"ItemRequirements"
+		{
+			"01"						""
+		}
+	}
+	"item_recipe_hand_of_midas"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+		"ItemRequirements"
+		{
+			"01"						""		
+		}
+	}
+	"item_black_king_bar"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+	"item_blade_mail"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+	"item_blink"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+	
+	"item_hand_of_midas"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+	"item_magic_stick"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+	"item_magic_wand"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+	"item_smoke_of_deceit"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+	"item_travel_boots"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+	"item_ward_observer"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+	"item_talisman_of_evasion"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+	"skeleton_king_reincarnation"
+	{
+		"AbilityCooldown"				"120 80 60"
+	}
+	"sandking_sand_storm"
+	{
+		"AbilityCastRange"				"0"
+		"AbilityDuration"				"20.0 40.0 60.0 80.0"
+
+		"AbilityCooldown"				"40.0 30.0 20.0 10.0"
+		"AbilityChannelTime"			"20.0 40.0 60.0 80.0"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		"AbilityDamage"					"25 50 75 100"
+
+		"AbilityManaCost"				"60 50 40 30"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sand_storm_invis_delay"	"1.5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"sand_storm_radius"		"525"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"AbilityDuration"		"10.0 20.0 30.0 40.0"
+			}
+		}
+	}
+	"mirana_leap"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"leap_distance"			"300 400 500 600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"leap_speed"			"2000.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"leap_acceleration"		"7000.0"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"leap_radius"		"1000"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"leap_speedbonus"	"6 10 14 18"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"leap_speedbonus_as"	"10 18 26 34"
+			}
+		}
+	}
+	"elder_titan_ancestral_spirit"
+	{
+		"AbilityCastRange"				"1000"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"275"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"pass_damage"					"60 100 140 180"
+			}
+						
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"spirit_duration"				"5.0"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"buff_duration"					"9.0"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"speed"							"600"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"move_pct_creeps"				"1"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"move_pct_heroes"				"5"
+			}
+			"08"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage_creeps"					"3 6 9 12"
+			}
+			"09"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage_heroes"					"10 20 30 40"
+			}	
+			"10"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"move_pct_cap"					"30"
+			}		
+		}
+	}
+
+	"sven_great_cleave"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"great_cleave_radius"	"250.0"
+			}
+			
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"great_cleave_damage"	"15 20 30 50"
+			}
+		}
+	}
+
+	"rubick_spell_steal"
+	{
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	}
+	"gyrocopter_call_down"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"slow_duration_first"		"2"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"slow_duration_second"		"3"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_first"				"250 300 350"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_second"				"100 150 200"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"slow_first"				"50"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"slow_second"				"20"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"450"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"range_scepter"				"1000"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_second_scepter"		"300 500 750"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Helm of the Dominator Override
+	//=================================================================================================================
+	"item_helm_of_the_dominator"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_helm_of_the_dominator"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"Modifiers"
+		{
+			"modifier_hotd"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+				}
+				"Orb"
+				{
+					"Priority"			"DOTA_ORB_PRIORITY_ITEM"
+				}
+				
+				"OnOrbImpact"
+				{
+					"Lifesteal"
+					{
+						"Target"			"ATTACKER"
+						"LifestealPercent"	"%lifesteal_percent"
+					}
+				}
+			}
+		}
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"5"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lifesteal_percent"		"20"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Shiva's Override
+	//=================================================================================================================
+	"item_shivas_guard"
+	{
+		"AbilityCooldown"				"20"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"15"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"150"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_attack_speed"		"-30"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_radius"			"719"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_speed"			"300"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_damage"			"200"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blast_movement_speed"	"-40"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"blast_debuff_duration"	"4.0"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Quelling Blade
+	//=================================================================================================================
+	"item_quelling_blade"
+	{
+		"ItemCost"						"3000"
+	}
+
+	//=================================================================================================================
+	// Smoke of Deceit
+	//=================================================================================================================
+	"item_smoke_of_deceit"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+
+	
+	//=================================================================================================================
+	// Elder Titan: Natural Order
+	//=================================================================================================================
+	"elder_titan_natural_order"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"275 275 275 275"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"armor_reduction_pct"			"3 6 9 12"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"magic_resistance_pct"		"8 16 25 33"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Witch Doctor: Maledict
+	//=================================================================================================================
+	"witch_doctor_maledict"
+	{
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	}
+	
+	//=================================================================================================================
+	// Templar Assassin: Trap
+	//=================================================================================================================
+	"templar_assassin_trap"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed_bonus"		"-50"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"trap_radius"				"375"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"trap_duration"				"5.0"
+			}
+			"04"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"movement_speed_bonus_stage"		"-6"
+			}	
+		}
+	}
+	
+	//=================================================================================================================
+	// Templar Assassin: Self Trap
+	//=================================================================================================================
+	"templar_assassin_self_trap"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed_bonus"		"-50"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"trap_radius"				"400"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"trap_duration"				"5.0"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed_bonus_stage"		"-6"
+			}
+		}
+	}		
+
+	//=================================================================================================================
+	// Elder Titan: Echo Stomp
+	//=================================================================================================================
+	"elder_titan_echo_stomp"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"cast_time"						"1.4"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"475"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"sleep_duration"				"2.0 3.0 4.0 5.0"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"stomp_damage"					"40 80 120 160"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"initial_stun_duration"					"0.65"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Elder Titan: Echo Stomp (Spirit Version)
+	//=================================================================================================================
+	"elder_titan_echo_stomp_spirit"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"cast_time"						"1.4"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"475"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"sleep_duration"				"2.0 3.0 4.0 5.0"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"stomp_damage"					"40 80 120 160"
+			}
+		}
+	}
+}

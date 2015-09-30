@@ -1,0 +1,81 @@
+.ButtonRowHorizontal
+{
+    flow-children: right;
+		
+
+    margin-right: 20%;
+    margin-bottom: 20%;
+	vertical-align: bottom;
+    horizontal-align: right;
+}
+
+.ButtonRowVertical
+{
+    flow-children: down;
+
+    vertical-align: bottom;
+    horizontal-align: left;
+    margin-left: 1%;
+    margin-bottom: 20%;
+
+}
+
+.Button
+{
+    width: 66px;
+    height: 66px;
+    
+    border-radius: 0px;
+    opacity: 1;
+}
+
+.Button:hover 
+{
+	saturation: 0.5;
+}
+
+.Button:active
+{
+    transform: scaleX(0.96) scaleY(0.96);
+}
+
+#base_panel_0
+{
+    vertical-align: top;
+}
+
+.Image
+{
+    vertical-align: bottom;
+    horizontal-align: right;
+    margin-right: 4px;
+    margin-bottom: 4px;
+
+    width: 59px;
+    height: 59px;
+    opacity: 1;
+    
+}
+
+.Label
+{
+	color: #eeeeee;
+    font-size: 14px;
+    font-weight: bold;
+	text-shadow: 0px 0px 6px 7 #ADA11D;
+	margin-right: 5px;
+	margin-bottom: 5px;
+
+	
+	vertical-align: bottom;
+	horizontal-align: right;
+}
+
+.borderimage
+{
+    vertical-align: bottom;
+    horizontal-align: left;
+    
+    width: 66px;
+    height: 66px;
+}

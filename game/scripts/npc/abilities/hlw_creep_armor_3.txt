@@ -1,0 +1,19 @@
+"hlw_creep_armor_3"
+{
+	"BaseClass"	"ability_datadriven"
+	"AbilityTextureName"	"dragon_knight_dragon_blood"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"MaxLevel"				"1"
+	"Modifiers"
+	{
+		"hlw_creep_armor_3"
+		{
+			"Passive"						"1"
+			"IsHidden"						"1"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "30"
+			}
+		}
+	}
+}

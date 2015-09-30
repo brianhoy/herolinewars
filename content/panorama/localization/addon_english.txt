@@ -1,0 +1,49 @@
+"addon"
+{
+
+	// Settings
+	"hlw_setting_creep_difficulty"					"Creep Difficulty"
+	"hlw_setting_creep_difficulty_1"				"Easy"
+	"hlw_setting_creep_difficulty_2"				"Medium"
+	"hlw_setting_creep_difficulty_3"				"Hard"
+	"hlw_setting_creep_difficulty_4"				"Very Hard"
+
+	"hlw_setting_max_amount_of_creeps_on_map"		"Maximum amount of creeps a team is allowed to have on the map"
+	"hlw_setting_max_amount_of_creeps_on_map_short"	"Max creeps on map per team"
+	"hlw_setting_max_creep_charges"					"Max charges per creep"
+	"hlw_setting_max_creep_charges_short"			"Max creep charges"
+	"hlw_setting_note"								"Note: Selecting lower numbers in the 'MAX CREEPS ON MAP PER TEAM' and 'MAX CREEP CHARGES' settings will increase performance."
+
+	// Income
+	"hlw_radiant"									"Radiant Incomes"
+	"hlw_dire"										"Dire Incomes"
+
+	// Teams
+	"Unassigned"      								"Unassigned Team"
+	"Spectator"       								"Spectator Team"
+	"Neutrals"        								"Neutral Team"
+	"NoTeam"          								"No Team"
+
+	"DOTA_GoodGuys"   								"Radiant"
+	"DOTA_BadGuys"    								"Dire"
+	
+	"addonname"										"Hero Line Wars"
+
+	// Overthrow Game Info panel
+	"overthrow_game_info_header_how_to_play"		"How to Play:"
+	"overthrow_game_info_header_objective"			"Objective:"
+
+	"overthrow_brief_description"					"Hero Line Wars is a custom gamemode about running the enemy team out of lives by sending creeps their way. When a creep hits their base, they will lose one life."
+	"overthrow_game_info_throne"					"Click creeps on the creep bar to spawn them."
+	"overthrow_game_info_coins"						"Every 10 seconds your income will be given to you. Your income is increased for each creep you spawn, and higher level creeps give a higher income."
+	"overthrow_game_info_items"						"Use your assigned controller to cast powerful spells to disrupt the enemy. Your assigned controller is located on your team's island near the center of the map."
+
+	"overthrow_game_info_tips_header"				"Tips:"
+	"overthrow_game_info_tip01"						"• Use <font color='#FFB300'>glyph</font> to stun and knock back enemy creeps."
+	"overthrow_game_info_tip02"						"• Lower level creeps give more <font color='#FFB300'>income per gold spent.</font>"
+	"overthrow_game_info_tip03"						"• Watch out for the <font color='#FF0000'>sudden death</font> phase. The <font color='#FF0000'>sudden death</font> phase starts 20 minutes into the game and sets each teams' lives to 1."
+	"overthrow_game_info_tip04"						"• <font color='#0BE000'>Right-clicking</font> a creep button buys as many of that creep as possible."
+	"overthrow_game_info_tip05"						"• If the <font color='#0BE000'>income</font> or <font color='#0BE000'>creep</font> bar is getting in the way, you can press the <font color='#0BE000'>collapse button</font> on each to hide or move it."
+	"overthrow_game_info_tip06"						"• Moving your controller (the wizard courier) to the stone on your team's island gives your courier <font color='#34C9FA'>mana</font> at the cost of <font color='#FFCC00'>gold</font>."
+	"overthrow_game_info_tip07"						"• Use the <font color='#0BE000'>Control Group Tab</font> keybind to quickly switch unit selection."
+}

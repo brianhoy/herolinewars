@@ -1,0 +1,53 @@
+"npc_dota_unit_hlw_level15"
+{
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/creeps/neutral_creeps/n_creep_centaur_lrg/n_creep_centaur_lrg.vmdl"
+	"SoundSet"					"n_creep_Melee"
+	"ModelScale" 				"1"
+	"GameSoundsFile"	"soundevents/game_sounds_creeps.vsndevts"
+	"Level"						"15"
+
+	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+	"AttackAnimationPoint"		"0.4"
+	"AttackAcquisitionRange"	"500"
+	"AttackRange"				"100"
+
+	"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"
+	"RingRadius"				"80"
+	"HealthBarOffset"			"220"
+
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+	"MovementSpeed"		"100"
+	"MovementTurnRate"			"0.5"
+
+	"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+	"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	"VisionDaytimeRange"		"850"
+	"VisionNighttimeRange"		"800"
+
+	"ArmorPhysical"				"15"
+	"MagicalResistance"			"15"
+	"MovementSpeed"				"250"
+ 
+		"Creature"
+	{
+		"CanRespawn"				"0"
+		"States"
+		{
+			"Invade"
+			{
+				"Name"				"Invade"
+				"Aggression"		"100.0"
+				"Avoidance"			"0.0"
+				"Support"			"0.0"
+				"RoamDistance"		"150.0"
+			}
+		}
+		"DefaultState"				"Invade"
+
+		"DisableClumpingBehavior"	"1"
+	}
+}

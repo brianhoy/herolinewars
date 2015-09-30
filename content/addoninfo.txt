@@ -1,0 +1,8 @@
+"AddonInfo"
+{
+	"TeamCount"		"2"
+	"hlw_map_1"
+	{
+		"MaxPlayers"		"12"
+	}
+}

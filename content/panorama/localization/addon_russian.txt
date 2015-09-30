@@ -1,0 +1,50 @@
+"addon"
+{
+
+	// Settings
+	"hlw_setting_creep_difficulty"					"Сложность Крипов"
+	"hlw_setting_creep_difficulty_1"				"Легкий"
+	"hlw_setting_creep_difficulty_2"				"Средний"
+	"hlw_setting_creep_difficulty_3"				"Сложный"
+	"hlw_setting_creep_difficulty_4"				"Хардкор"
+
+	"hlw_setting_max_amount_of_creeps_on_map"		"Максимальное кол-во крипов разрешённое на одну команду"
+	"hlw_setting_max_amount_of_creeps_on_map_short"	"Максимум крипов за команду"
+	"hlw_setting_max_creep_charges"					"Максимальное кол-во крип зарядов на команду"
+	"hlw_setting_max_creep_charges_short"			"Максимум крип зарядов"
+	"hlw_setting_note"								"Заметка: Выбирая меньшее кол-во 'МАКС КРИПОВ НА КОМАДНУ' и 'МАКС КРИП ЗАРЯДОВ' увеличивает производительность."
+
+	// Income
+	"hlw_radiant"									"Света Доход"
+	"hlw_dire"										"Тьмы Доход"
+
+	// Teams
+	"Unassigned"      								"Unassigned Team"
+	"Spectator"       								"Spectator Team"
+	"Neutrals"        								"Neutral Team"
+	"NoTeam"          								"No Team"
+
+	"DOTA_GoodGuys"   								"Силы Света"
+	"DOTA_BadGuys"    								"Силы Тьмы"
+	
+	"addonname"										"Hero Line Wars"
+
+	// Overthrow Game Info panel
+	"overthrow_game_info_header_how_to_play"		"Как играть:"
+	"overthrow_game_info_header_objective"			"Ваша задача:"
+
+	"overthrow_brief_description"					"Hero Line Wars - это Dota 2 мод в котором вы должны защититься от крипов и направить крипов на базу противника. 1 удар = -1 жизни."
+	"overthrow_game_info_throne"					"Используйте прилавку с крипами чтобы заспавнить их."
+	"overthrow_game_info_coins"						"Ваше золото перечисляется вам каждые 10 секунд. Ваш доход увеличивается с каждым заспавненным крипом, а крипы с большим уровнем дают больше дохода."
+	"overthrow_game_info_items"						"Используйте назначенный контроллер чтобы кастовать сильные скилы для уничтожения противника. Ваш контроллер находится на острове вашей команды ближе к центру."
+
+	"overthrow_game_info_tips_header"				"Подсказки:"
+	"overthrow_game_info_tip01"						"• Используйте <font color='#FFB300'>glyph</font> для того чтобы застанить и оттолкнуть крипов."
+	"overthrow_game_info_tip02"						"• Крипы маленького уровня дают больше <font color='#FFB300'>прибыли при каждой потраченной монеты.</font>"
+	"overthrow_game_info_tip03"						"• Остерегайтесь от волны <font color='#FF0000'>внезапных смертников</font>. Волна <font color='#FF0000'>внезапных смертников</font> начинается ближе к 20-й минуте."
+	"overthrow_game_info_tip04"						"• Направляя свой контроллер (курьер-маг) к камням придаёт вашему курьеру <font color='#001EFF'>маны</font> стоимость которой является <font color='#FFCC00'>золото</font>."
+	"overthrow_game_info_tip05"						"• Если <font color='#0BE000'>прилавка крипов</font> мешает вам играть, вы можете её передвинуть на левую часть экрана нажимая <font color='#0BE000'>последнюю кнопку</font>."
+	"overthrow_game_info_tip06"						"• Если <font color='#0BE000'>прилавка дохода</font> мешает вам играть, нажмите на <font color='#0BE000'>кнопку коллапса</font> чтобы спрятать её."
+	"overthrow_game_info_tip07"						"• Используйте свой <font color='#0BE000'>контроллер</font> (назначенный курьер вашей команды) чтобы кастовать <font color='#FF0000'>мощные</font> спелы которые могут помешать вашим врагам."
+"
+}

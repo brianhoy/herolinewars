@@ -1,0 +1,76 @@
+//=================================================================================================================
+// Ability: Antimage Will Break (Credit to Pizzalol for template, Aardvark for idea)
+//=================================================================================================================
+"hlw_antimage_will_break"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"		
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"hlw_antimage_will_break"
+
+	// Precache	
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"particle"	"particles/generic_gameplay/generic_manaburn.vpcf"
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+	}
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_per_nearby_creep"		"3 6 9 12"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"radius"			"225 250 275 300"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_mana_break_orb_datadriven"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+
+			"Orb"
+			{
+				"Priority"	"DOTA_ORB_PRIORITY_ABILITY"
+			}
+
+			"OnOrbImpact"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"scripts/vscripts/abilities/antimage_will_break"
+					"Function"		"WillBreak"
+					"Target"		"TARGET"
+					"Radius"		"%radius"
+					"DamagePerCreep"	"%damage_per_nearby_creep"
+				}
+
+				"FireSound"
+				{
+					"EffectName"	"Hero_Antimage.ManaBreak"
+					"Target"		"TARGET"
+				}
+
+				"AttachEffect"
+				{
+					"EffectName"	"particles/generic_gameplay/generic_manaburn.vpcf"
+					"EffectAttachType"	"attach_hitloc"
+					"Target"		"TARGET"
+				}
+			}
+		}
+	}
+}

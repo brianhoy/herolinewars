@@ -1,0 +1,20 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/hlw_creep.css" />
+	</styles>
+	<scripts>
+        <include src="file://{resources}/scripts/custom_game/hlw_creep.js" />
+    </scripts>
+	<Panel>
+		<Button class="CreepButton" onactivate="BuyCreep()" oncontextmenu="BuyAllCreeps()">
+			<Image id="creepImage" class="CreepImage" />
+			<Label id="creepCost" class="CreepGoldCost" text="" />
+			<Label id="creepCharges" class="CreepCharges" text="" />
+			<Image class="BorderImage" src="file://{images}/custom_game/hlw_ui/border2.png" />
+			<Panel id="creepTint" />
+			<Panel id="creepHover" class="HoverOverlay" />
+
+		</Button>
+
+	</Panel>
+</root>

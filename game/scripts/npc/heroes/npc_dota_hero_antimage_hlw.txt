@@ -1,0 +1,10 @@
+//=================================================================================================================
+// HERO: Anti Mage
+//=================================================================================================================
+"npc_dota_hero_antimage_hlw"
+{
+	"override_hero"			"npc_dota_hero_antimage"
+	"Ability1"				"hlw_antimage_will_break"
+	"Ability3"				"hlw_antimage_cleavify"
+	"Ability4"				"hlw_antimage_mana_void"
+}

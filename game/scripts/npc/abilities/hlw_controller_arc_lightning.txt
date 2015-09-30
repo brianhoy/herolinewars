@@ -1,0 +1,40 @@
+//=================================================================================================================
+// Controller Ability: Arc Lightning [Credit to EinAlex]
+//=================================================================================================================
+"hlw_controller_arc_lightning"
+{
+	"BaseClass"						"zuus_arc_lightning"
+	"AbilityTextureName"            "zuus_arc_lightning"
+	"MaxLevel"						"4"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityCastRange"				"GLOBAL"
+	"AbilityCastPoint"				"0"
+	"AbilityDamage"					"400"
+	"AbilityCooldown"				"20"
+	"AbilityManaCost"				"100"
+	
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"radius"	"1000"
+		}
+		"02"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"jump_count"	"15 20 25 30"
+		}
+		"03"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"jump_delay"	"0.25"
+		}
+	}
+}

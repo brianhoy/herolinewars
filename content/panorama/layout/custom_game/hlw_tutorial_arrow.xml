@@ -1,0 +1,13 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/hlw_tutorial_arrow.css" />
+	</styles>
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/hlw_tutorial_arrow.js" />
+    </scripts>
+	<Panel class="Root" hittest="false">
+		<Panel class="Root" hittest="false">
+			<Image id="Arrow" class="ArrowImage Hide" src="file://{images}/custom_game/hlw_ui/down_arrow.png" hittest="false"/>
+		</Panel>
+	</Panel>
+</root>
