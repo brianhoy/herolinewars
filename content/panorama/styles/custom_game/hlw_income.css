@@ -35,7 +35,6 @@
 
 #GoldBar
 {
-    transform: translateX( -182px ) translateY( 0px );
     width: 100%;
     height: 100%;
     background-color: gold;
@@ -65,8 +64,7 @@
     {
         transform: translateX( -182px ) translateY( 0px );
     }
-    /* Leaving this at 99% makes a cool animation between 99% and 100% that makes the bar go back to the start*/
-    99%
+    100%
     {
         transform: translateX( 0px ) translateY( 0px );
 

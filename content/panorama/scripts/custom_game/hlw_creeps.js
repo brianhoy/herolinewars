@@ -14,14 +14,14 @@ function UpdateButtonStatuses(data)
 	{
 		for(var i = 1; i <= 10; i++)
 		{
-			m_CreepPanels[i - 1].data().Update(PlayerGold, PlayerCharges[i]);
+			m_CreepPanels[i - 1].Update(PlayerGold, PlayerCharges[i]);
 		}
 	}
 	else
 	{
 		for(var i = 0; i <= 10; i++)
 		{
-			m_CreepPanels[i].data().Update(PlayerGold, PlayerCharges[i]);
+			m_CreepPanels[i].Update(PlayerGold, PlayerCharges[i]);
 		}
 	}
 }
@@ -61,7 +61,7 @@ function SetButtonConfig(data)
 		var panel = $.CreatePanel("Panel", contextPanel, "creep_" + i);
 		panel.BLoadLayout("file://{resources}/layout/custom_game/hlw_creep.xml", false, false);
 		m_CreepPanels.push(panel);
-		panel.data().BuildCreepButton(CreepImagePaths[i], CreepCharges, CreepCosts[i], i - 1);
+		panel.BuildCreepButton(CreepImagePaths[i], CreepCharges, CreepCosts[i], i - 1);
 		if(i == 0)
 		{
 			m_UpgradePanel = panel;

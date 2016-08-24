@@ -1,0 +1,163 @@
+//=================================================================================================================
+// Earthshaker: Fissure
+//=================================================================================================================
+"hlw_earthshaker_fissure"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"earthshaker_fissure"
+
+	"precache"
+	{
+		"particle"		"particles/heroes/earthshaker/earthshaker_fissure.vpcf"
+		"soundfile"		"sounds/weapons/hero/earthshaker/fissure.vsnd"
+		"soundfile"		"sounds/weapons/hero/earthshaker/fissure_destroy01.vsnd"
+		"soundfile"		"sounds/weapons/hero/earthshaker/fissure_destroy02.vsnd"
+		"soundfile"		"sounds/weapons/hero/earthshaker/fissure_destroy03.vsnd"
+		"soundfile"		"sounds/weapons/hero/earthshaker/fissure_destroy04.vsnd"
+		"soundfile"		"sounds/weapons/hero/earthshaker/fissure_destroy05.vsnd"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"1400"
+	"AbilityCastPoint"				"0.69 0.69 0.69 0.69"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15.0 15.0 15.0 15.0"
+	"AbilityDuration"				"1.0 1.25 1.5 1.75"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"110 170 230 300"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"125 140 155 170"		
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"fissure_range"				"1400 1500 1600 1700"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"fissure_duration"			"8.0"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"fissure_radius"				"225"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"stun_duration"				"1.0 1.25 1.5 1.75"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"width"						"68"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"offset"					"160"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"initialization_time"		"0.5"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_EarthShaker.Fissure"
+			"Target"		"CASTER"
+		}
+	
+		"RunScript"
+		{
+			"ScriptFile"	"abilities/heroes/earthshaker/fissure.lua"
+			"Function"		"CreateFissure"
+			"particle"		"particles/heroes/earthshaker/earthshaker_fissure.vpcf"
+		}
+		
+		"CreateThinker"
+		{
+			"ModifierName"	"modifier_fissure_datadriven"
+			"Target"		"POINT"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_fissure_datadriven"
+		{
+			"Aura"					"modifier_check_position"
+			"Aura_Radius"			"%fissure_range"
+			"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+			"Aura_Types"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			"Duration"				"%fissure_duration"
+			
+			"OnDestroy"
+			{
+				"FireSound"
+				{
+					"EffectName"	"Hero_EarthShaker.FissureDestroy"
+					"Target"		"TARGET"
+				}
+			}
+		}
+		
+		"modifier_check_position"
+		{
+			"IsHidden"	"1"
+		
+			"OnUnitMoved"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"abilities/heroes/earthshaker/fissure.lua"
+					"Function"		"CheckPosition"
+				}
+			}
+			
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"abilities/heroes/earthshaker/fissure.lua"
+					"Function"		"RemoveModifiers"
+				}
+			}
+		}
+		
+		"modifier_fissure_block"
+		{
+			"IsHidden"	"1"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	"0.1"
+			}
+		}
+	}
+
+}

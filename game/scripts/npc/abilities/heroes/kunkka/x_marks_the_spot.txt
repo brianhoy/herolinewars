@@ -1,0 +1,78 @@
+//=================================================================================================================
+// Kunkka: X Marks the Spot
+//=================================================================================================================
+"hlw_kunkka_x_marks_the_spot"
+{
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+	
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_BASIC"
+
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"kunkka_x_marks_the_spot"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"						"soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts"
+		"particle"						"particles/econ/items/kunkka/divine_anchor/hero_kunkka_dafx_skills/kunkka_spell_x_spot_mark_red_fxset.vpcf"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.35"
+	"AbilityCastRange"				"70"
+	"AoERadius"						"%radius"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"4.0 5.0 6.0 8.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"radius"					"500 600 700 800"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"				"abilities/heroes/kunkka/x_marks_the_spot.lua"
+			"Function"					"CreateX"
+			"Target"					"POINT"
+			"particle"					"particles/econ/items/kunkka/divine_anchor/hero_kunkka_dafx_skills/kunkka_spell_x_spot_mark_red_fxset.vpcf"
+		}
+		"FireSound"
+		{
+			"EffectName"				"Ability.XMarksTheSpot.Target"
+			"Target"					"POINT"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_kunkka_x_marks_the_spot_forcemove_debuff"
+		{
+			"Properties"
+			{
+				"STATE_COMMAND_RESTRICTED"			"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}

@@ -85,7 +85,6 @@ var hasAnimClass = false;
 
 function StartIncomeBar(keys)
 {
-    //$.Msg("[HLW-js] Recieved StartIncomeBar event from server.");
     if(hasAnimClass == true)
     {
         // This restarts the animation

@@ -5,15 +5,21 @@ AI_STATE_AGGRESSIVE = 1
 NeutralAI = {}
 NeutralAI.__index = NeutralAI
 
+-- NOT USED - CREATES TOO MUCH LAG
+
 function NeutralAI:Start( unit, params )
 	local ai = {}
 	setmetatable( ai, NeutralAI )
 
+	print("neutralAI created")
+
+	unit.ai = ai
 	ai.unit = unit 
 	ai.state = AI_STATE_IDLE
 	ai.stateThinks = {
 		[AI_STATE_IDLE] = 'IdleThink',
-		[AI_STATE_AGGRESSIVE] = 'AggressiveThink'
+		[AI_STATE_AGGRESSIVE] = 'AggressiveThink',
+		[AI_STATE_FORCE_MOVE_TO_POINT] = 'MoveToPointThink'
 	}
 
 	ai.spawnPos = params.spawnPos
@@ -25,6 +31,7 @@ function NeutralAI:Start( unit, params )
 	ai.nextWpLoc = nil
 	ai:MoveToWaypoint()
 	ai.team = unit:GetTeamNumber()
+	ai.forcedWaypoint = nil
 
 	Timers:CreateTimer(function()
 		return ai:GlobalThink()
@@ -98,6 +105,26 @@ function NeutralAI:AggressiveThink()
 		self.state = AI_STATE_IDLE 
 		return true 
 	end
+end
+
+function NeutralAI:MoveToPointThink()
+	local order = {
+ 		UnitIndex = self.unit:entindex(), 
+ 		OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION,
+ 		Position = self.forcedWaypoint, 
+ 		Queue = false
+	}
+	ExecuteOrderFromTable(order)
+end
+
+function NeutralAI:MoveToPoint(duration, point)
+	self.state = AI_STATE_FORCE_MOVE_TO_POINT
+	ai.forcedWaypoint = point
+	self:MoveToPointThink()
+	Timers:CreateTimer(duration, function()
+		self.state = AI_STATE_IDLE
+		self:MoveToWaypoint()
+	end)
 end
 
 function NeutralAI:MoveToWaypoint()

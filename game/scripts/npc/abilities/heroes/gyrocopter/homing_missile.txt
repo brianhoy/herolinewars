@@ -1,0 +1,167 @@
+//=================================================================================================================
+// Gyrocopter: Homing Missile
+//=================================================================================================================
+"hlw_gyrocopter_homing_missile"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"hlw_gyropter_homing_missile"
+	
+	"precache"
+	{
+		"particle"		"particles/units/heroes/hero_gyrocopter/gyro_guided_missile_target.vpcf"
+		"particle"		"particles/units/heroes/hero_gyrocopter/gyro_guided_missile_death.vpcf"
+		"particle"		"particles/units/heroes/hero_gyrocopter/gyro_guided_missile_explosion.vpcf"
+		"particle"		"particles/units/heroes/hero_gyrocopter/gyro_homing_missile_fuse.vpcf"
+		"soundfile"		"sounds/weapons/hero/gyrocopter/homing_missile.vsnd"
+		"soundfile"		"sounds/weapons/hero/gyrocopter/homing_missile_enemy.vsnd"
+		"soundfile"		"sounds/weapons/hero/gyrocopter/homing_missile_destroy.vsnd"
+		"soundfile"		"sounds/weapons/hero/gyrocopter/homing_missile_target.vsnd"
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"2050"
+	"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20 17 14 11"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"120 130 140 150"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"%max_damage"
+	
+	"AoERadius"						"%radius"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"hits_to_kill_tooltip"		"3 3 4 5"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"min_damage"				"50"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"max_damage"				"100 300 500 700"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"pre_flight_time"			"2"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"starting_speed"			"400"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"max_speed"					"900"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"acceleration"					"100"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"starting_distance"			"130"
+		}
+		"09"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"radius"					"125 150 175 200"
+		}
+		"10"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"knockback_duration"		"0.1"
+		}
+		"11"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"knockback_distance"		"100"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"abilities/heroes/gyrocopter/homing_missile.lua"
+			"Function"		"CreateMissile"
+			"Target"		"POINT"
+			"particle"		"particles/units/heroes/hero_gyrocopter/gyro_homing_missile_fuse.vpcf"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_homing_missile_datadriven"
+		{
+			"OnCreated"
+			{
+				"FireSound"
+				{
+					"EffectName"	"Hero_Gyrocopter.HomingMissile"
+					"Target"		"TARGET"
+				}
+			}
+		
+			"ThinkInterval"		"0.02"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"abilities/heroes/gyrocopter/homing_missile.lua"
+					"Function"		"MoveMissile"
+				}
+			}
+			
+			"OnTakeDamage"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"abilities/heroes/gyrocopter/homing_missile.lua"
+					"Function"		"MissileAttacked"
+					"sound"			"Hero_Gyrocopter.HomingMissile"
+					"sound2"		"Hero_Gyrocopter.HomingMissile.Enemy"
+					"sound3"		"Hero_Gyrocopter.HomingMissile.Target"
+					"sound4"		"Hero_Gyrocopter.HomingMissile.Destroy"
+					"particle"		"particles/units/heroes/hero_gyrocopter/gyro_guided_missile_death.vpcf"
+					"particle2"		"particles/units/heroes/hero_gyrocopter/gyro_guided_missile_explosion.vpcf"
+				}
+			}
+		}
+		
+		"modifier_homing_missile_target"
+		{
+			"IsDebuff" "1"
+			
+			"EffectName"		"particles/units/heroes/hero_gyrocopter/gyro_guided_missile_target.vpcf"
+			"EffectAttachType"	"follow_overhead"
+		}
+	}
+}

@@ -49,6 +49,7 @@ function GameMode:GetIncome(creepNumber, caster)
 	local otherTeamsIncomes = 0
 	local yourTeamsIncome = 0
 	local otherTeamCount = 0
+
 	for k, v in pairs(GameMode.PlayerIncomes) do
 		if PlayerResource:GetTeam(k) == caster:GetOpposingTeamNumber() then
 			otherTeamsIncomes = otherTeamsIncomes + v
@@ -59,7 +60,10 @@ function GameMode:GetIncome(creepNumber, caster)
 	end
 	
 	local lead = otherTeamsIncomes - yourTeamsIncome
-	local weighted = 0.015 * lead
+	if lead < 0 then
+		lead = 0
+	end
+	local weighted = 0.001 * lead
 
 	local income = (GameMode.PlayerIncomes[caster:GetPlayerID()] + (weighted + GameMode.CreepIncome[creepNumber]) ) * 100
 	return math.floor(income + 0.5)/100
@@ -93,6 +97,25 @@ function GameMode:QueueWaypoints(unit, waypoints)
  		}
 		ExecuteOrderFromTable(moveOrder)
 	end
+end
+
+function GameMode:RequeueWaypoints(unit, waypoints, starting_waypoint_team, starting_waypoint_side, starting_waypoint_index)
+	local waypoint_count = 0
+	for _, __ in pairs(waypoints[starting_waypoint_team][starting_waypoint_side]) do 
+		waypoint_count = waypoint_count + 1 
+	end
+	for index = starting_waypoint_index, waypoint_count do
+		local waypoint = waypoints[starting_waypoint_team][starting_waypoint_side][index]
+		local moveOrder = 
+		{
+	 		UnitIndex = unit:entindex(), 
+	 		OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
+	 		Position = waypoint:GetAbsOrigin(), 
+	 		Queue = 1
+ 		}
+		ExecuteOrderFromTable(moveOrder)
+	end
+
 end
 
 function GameMode:ApplyStats(unit, factor)

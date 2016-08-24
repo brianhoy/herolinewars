@@ -20,9 +20,11 @@ function modifier_cleavable_lua:OnAttackLanded(keys)
 	local attacker = keys.attacker
 	local caster = self:GetCaster()	
 
-	if keys.attacker:IsRealHero() ~= true then 
+	if keys.attacker:IsRealHero() ~= true or 
+	   keys.target:HasModifier("modifier_cleavable_lua") ~= true then 
 		return
 	end
+
 
 	local ability = caster:FindAbilityByName("hlw_antimage_cleavify")
 	local radius = ability:GetSpecialValueFor("cleave_radius")

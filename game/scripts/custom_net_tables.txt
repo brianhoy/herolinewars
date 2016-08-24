@@ -4,6 +4,7 @@
 	[
 		"income",
 		"controllers",
-		"attributecost"
+		"attributecost",
+		"gladiatorduelmodifiers"
 	]
 }

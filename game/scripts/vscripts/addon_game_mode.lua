@@ -1,3 +1,6 @@
+
+
+
 -- This is the entry-point to your game mode and should be used primarily to precache models/particles/sounds/etc
 
 require('internal/util')
@@ -22,7 +25,7 @@ function Precache( context )
 	--PrecacheResource("particle_folder", "particles/test_particle", context)
 	PrecacheResource("particle", "particles/units/heroes/hero_phoenix/phoenix_supernova_death_streak.vpcf", context)
 	PrecacheResource("particle", "particles/units/heroes/hero_drow/drow_frost_arrow.vpcf", context)
-
+	PrecacheResource("particle", "particles/antimage_cleave_ring/dazzle_weave_circle_ray.vpcf", context)
 	PrecacheResource( "particle", "particles/items2_fx/veil_of_discord.vpcf", context )	
 	PrecacheResource( "particle_folder", "particles/frostivus_gameplay", context )
 
@@ -31,6 +34,7 @@ function Precache( context )
 	--PrecacheResource("model_folder", "particles/heroes/antimage", context)
 	--PrecacheResource("model", "particles/heroes/viper/viper.vmdl", context)
 	--PrecacheModel("models/heroes/viper/viper.vmdl", context)
+	--PrecacheModel("models/courier/donkey_crummy_wizard_2014/donkey_crummy_wizard_2014.vmdl", context)
 
 	-- Sounds can precached here like anything else
 	--PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_gyrocopter.vsndevts", context)
@@ -46,13 +50,12 @@ function Precache( context )
 	-- Entire heroes (sound effects/voice/models/particles) can be precached with PrecacheUnitByNameSync
 	-- Custom units from npc_units_custom.txt can also have all of their abilities and precache{} blocks precached in this way
 	--PrecacheUnitByNameSync("npc_dota_hero_ancient_apparition", context)
-	--PrecacheUnitByNameSync("npc_dota_hero_enigma", context)
+	--PrecacheUnitByNameSync("npc_dota_hero_enigma", context) 
 	
 	PrecacheItemByNameSync("item_hlw_portal", context)
 	PrecacheItemByNameSync("hlw_controller_sunstrike", context)
 
 	PrecacheUnitByNameSync("npc_dota_unit_hlw_controller", context)
-	PrecacheUnitByNameSync("npc_dota_hero_abyssal_underlord", context)
 	PrecacheUnitByNameSync("npc_dota_hero_brewmaster", context)
 	PrecacheUnitByNameSync("npc_dota_hero_jakiro", context)
 

@@ -70,7 +70,7 @@ function NoNavTouched(keys)
 	local activator = keys.activator
 	local className = activator:GetClassname()
 
-	if className == "npc_dota_hero_abyssal_underlord" then
+	if className == "npc_dota_hero_jakiro" then
 		return
 	else
 		EnsureRightSide(activator)
@@ -136,7 +136,7 @@ function UpgradeController(keys)
 	local activator = keys.activator
 	local className = activator:GetClassname()
 
-	if className ~= "npc_dota_hero_abyssal_underlord" then
+	if className ~= "npc_dota_hero_jakiro" then
 		return
 	end
 
@@ -181,7 +181,7 @@ end
 
 function OnUnitLeavePhaseArea(keys)
 	local activator = keys.activator
-	if string.sub(activator:GetUnitName(), 1, 23) == "npc_dota_unit_hlw_level" then
+	if activator and string.sub(activator:GetUnitName(), 1, 23) == "npc_dota_unit_hlw_level" then
 		activator:RemoveModifierByName("modifier_phased")
 	end
 end

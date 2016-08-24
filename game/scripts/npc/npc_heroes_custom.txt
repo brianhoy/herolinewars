@@ -1,6 +1,15 @@
 "DOTAHeroes"
 {
 	//=================================================================================================================
+	// HERO: Abaddon
+	//=================================================================================================================
+	"npc_dota_hero_abaddon_hlw"
+	{
+		"override_hero"			"npc_dota_hero_abaddon"
+		"Ability1"				"hlw_abaddon_mist_coil"
+		"Ability3"				"hlw_abaddon_curse_of_avernus"
+	}
+	//=================================================================================================================
 	// HERO: Anti Mage
 	//=================================================================================================================
 	"npc_dota_hero_antimage_hlw"
@@ -43,6 +52,23 @@
 		"Ability4"				"dark_seer_wall_of_discord"
 	}
 	//=================================================================================================================
+	// HERO: Dazzle
+	//=================================================================================================================
+	"npc_dota_hero_dazzle_hlw"
+	{
+		"override_hero"			"npc_dota_hero_dazzle"
+		"Ability1"				"hlw_dazzle_poison_touch"
+		"Ability3"				"hlw_dazzle_shadow_wave"
+	}
+	//=================================================================================================================
+	// HERO: Dragon Knight
+	//=================================================================================================================
+	"npc_dota_hero_dragon_knight_hlw"
+	{
+		"override_hero"			"npc_dota_hero_dragon_knight"
+		"Ability2"				"hlw_dragon_knight_dragon_tail"
+	}
+	//=================================================================================================================
 	// HERO: Drow Ranger
 	//=================================================================================================================
 	"npc_dota_hero_drow_ranger_holdout"
@@ -51,6 +77,39 @@
 		"Ability1"				"holdout_glacier_arrows"
 		"Ability2"				"holdout_multishot"
 		"Ability4"				"holdout_marksmanship"
+	}
+	//=================================================================================================================
+	// HERO: Earthshaker
+	//=================================================================================================================
+	"npc_dota_hero_earthshaker_hlw"
+	{
+		"override_hero"		"npc_dota_hero_earthshaker"
+		"Ability1"			"hlw_earthshaker_fissure"
+		"Ability2"			"hlw_earthshaker_enchant_totem"
+	}
+	//=================================================================================================================
+	// HERO: Faceless Void
+	//=================================================================================================================
+	"npc_dota_hero_faceless_void_hlw"
+	{
+		"override_hero"		"npc_dota_hero_faceless_void"
+		"Ability4"			"hlw_faceless_void_chronosphere"
+	}
+	//=================================================================================================================
+	// HERO: Gyrocopter
+	//=================================================================================================================
+	"npc_dota_hero_gyrocopter_hlw"
+	{
+		"override_hero"		"npc_dota_hero_gyrocopter"
+		"Ability2"			"hlw_gyrocopter_homing_missile"
+	}
+	//=================================================================================================================
+	// HERO: Huskar
+	//=================================================================================================================
+	"npc_dota_hero_huskar_hlw"
+	{
+		"override_hero"		"npc_dota_hero_huskar"
+		"Ability2"			"hlw_huskar_burning_silhouette"
 	}
 	//=================================================================================================================
 	// HERO: Juggernaut
@@ -70,13 +129,21 @@
 		"Ability2"				"keeper_of_the_light_mana_overload"
 	}
 	//=================================================================================================================
-	// HERO: Leigon Commander
+	// HERO: Kunkka
 	//=================================================================================================================
-	"npc_dota_hero_legion_commander_holdout"
+	"npc_dota_hero_kunkka_hlw"
+	{
+		"override_hero"			"npc_dota_hero_kunkka"
+		"Ability3"				"hlw_kunkka_x_marks_the_spot"
+	}
+	//=================================================================================================================
+	// HERO: Legion Commander
+	//=================================================================================================================
+	"npc_dota_hero_legion_commander_hlw"
 	{
 		"override_hero"			"npc_dota_hero_legion_commander"
-		
-		"Ability4"					"holdout_gladiators_unite"									
+		"Ability4"				"hlw_legion_commander_gladiators_unite"
+	
 	}
 	//=================================================================================================================
 	// HERO: Lina
@@ -265,7 +332,7 @@
 		{
 			"model"					"models/courier/donkey_crummy_wizard_2014/donkey_crummy_wizard_2014.vmdl"
 		}
-		"override_hero"				"npc_dota_hero_abyssal_underlord"
+		"override_hero"				"npc_dota_hero_jakiro"
 		"Model"						"models/courier/donkey_crummy_wizard_2014/donkey_crummy_wizard_2014.vmdl"
 	
 		"MinimapIcon"				"minimap_courier"

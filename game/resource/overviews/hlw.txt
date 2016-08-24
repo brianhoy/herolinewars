@@ -1,8 +1,8 @@
 hlw
 {
 	material materials/overviews/hlw.vmat
-	pos_x -5300
-	pos_y 5312
-	scale 10.125
+	pos_x -5112
+	pos_y 5112
+	scale 9.984
 }
 

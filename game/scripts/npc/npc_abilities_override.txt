@@ -45,6 +45,35 @@
 		"AbilityManaCost"				"100"
 	}
 
+	"bristleback_quill_spray"
+	{
+		"AbilityCooldown"				"3.0 2.8 2.6 2.3"
+		"AbilitySpecial"
+		{
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"quill_stack_damage"	"30.0 60.0 90.0 120.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"quill_stack_duration"	"100.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"max_damage"			"20000.0"
+			}
+		}
+	}
+
+	"dazzle_shallow_grave"
+	{
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityCastRange"				"500000"
+	}
+
 	"chen_holy_persuasion"
 	{
 		"AbilityCooldown"				"500.0 475.0 450.0 425.0"
@@ -54,6 +83,31 @@
 	{
 		"AbilityCooldown"				"500.0 475.0 450.0 425.0"
 	}
+
+	"dragon_knight_breathe_fire"
+	{
+		"AbilityCooldown"				"12.0 11.0 10.0 9.0"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"start_radius"			"150 150 150 150"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"end_radius"			"250 300 350 400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"range"					"650 700 750 800"
+			}
+		}
+	}
+
 	//=================================================================================================================
 	// Recipe: Greater Crit
 	//=================================================================================================================
@@ -1154,8 +1208,8 @@
 				"movement_speed_bonus_stage"		"-6"
 			}
 		}
-	}		
-
+	}
+	
 	//=================================================================================================================
 	// Elder Titan: Echo Stomp
 	//=================================================================================================================
@@ -1189,38 +1243,6 @@
 			{
 				"var_type"						"FIELD_FLOAT"
 				"initial_stun_duration"					"0.65"
-			}
-		}
-	}
-
-	//=================================================================================================================
-	// Elder Titan: Echo Stomp (Spirit Version)
-	//=================================================================================================================
-	"elder_titan_echo_stomp_spirit"
-	{
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"cast_time"						"1.4"
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"radius"						"475"
-			}
-			"03"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"sleep_duration"				"2.0 3.0 4.0 5.0"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"stomp_damage"					"40 80 120 160"
 			}
 		}
 	}

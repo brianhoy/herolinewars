@@ -1,0 +1,34 @@
+- Controller
+	- Blizzard: Fixed bug where it wouldn't damage units, and lowered damage.
+- Bonus Magic Damage from Intelligence Stats
+	- For every 2 intellect, the damage is amplified by an extra percent (On top of the base amp provided by dota)
+
+- Abaddon (do tooltips)
+	- Mist Coil: Now deals damage based on how much HP the enemy creep is missing
+	- Curse of Avernus: Now gives more bonus attack speed (300 at level 4)
+- Bristleback
+	- Quill Spray: Increased max damage to 20,000, decreased cooldown increased stack damage, and increased stack duration to 100s
+- Dazzle
+	- Poison Touch: Now a point target physics projectile rather than a unit target ability (Do Tooltips)
+	- Shadow Wave: Can now target enemies (Do tooltips)
+	- Shallow Grave: Now has a global cast range
+- Dragon Knight
+	- Breathe Fire: Increased AOE and longer range
+	- Dragon Tail: Now affects an AOE and knocks creeps back slightly
+- Earthshaker
+	- Fissure: Increased range and damage and now takes time to reach the end
+	- Enchant Totem: Increased cooldown and the buff doesn't go away after the first attack
+- Faceless Void
+	- Chronosphere: Now amplifies the damage of creeps inside by 600% and has a shorter cooldown (30s at level 3 with scepter)
+- Gyrocopter
+	- Homing Missile: Now is a point target ability that affects an AOE. It deals more damage to units closer to the target point
+- Huskar
+	- Burning Spears: Removed
+	- New Ability: Burning Silhouette - Active with a long cooldown that gives huskar a buff that increases his strength, lowers his health by 90%, lowers his base attack time, and makes all his spears burning
+- Kunkka
+	- X Marks the Spot: Now is a point target that mesmorizes nearby creeps, making them walk an x and stand still for a couple seconds
+- Legion Commander
+	- Gladiators, Unite!: Rewrote the ability (which was previously hardcoded in C++ for Valve's holdout gamemode) in lua so that the particle effect worked (some update broke the particle effects of every holdout ability)
+	- Gladiators, Unite!: Now gives evasion
+
+-createhero npc_dota_unit_hlw_level29 enemy

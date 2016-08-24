@@ -1,0 +1,37 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/custom_game/hlw_attribute_shop.vcss_c" />
+	</styles>
+    <scripts>
+        <include src="s2r://panorama/scripts/custom_game/hlw_attribute_shop.vjs_c" />
+    </scripts>
+	<Panel class="root">
+		<Panel>
+			<Button class="AttributeButton" onactivate="BuyAttribute('strength')" oncontextmenu="BuyAllAttributes('strength')">
+				<Image id="attributeImage" class="AttributeImage" src="s2r://panorama/images/custom_game/hlw_attributes/fist_png.vtex"/>
+				<Label id="strengthAttributeCost" class="AttributeGoldCost" text="100" />
+				<Image class="BorderImage" src="s2r://panorama/images/custom_game/hlw_ui/border2_png.vtex" />
+				<Panel id="strengthAttributeTint" class="attributeTint"/>
+				<Panel id="attributeHover" class="HoverOverlay" />
+			</Button>
+		</Panel>
+		<Panel>
+			<Button class="AttributeButton" onactivate="BuyAttribute('agility')" oncontextmenu="BuyAllAttributes('agility')">
+				<Image id="attributeImage" class="AttributeImage" src="s2r://panorama/images/custom_game/hlw_attributes/wind-slap_png.vtex" />
+				<Label id="agilityAttributeCost" class="AttributeGoldCost" text="100" />
+				<Image class="BorderImage" src="s2r://panorama/images/custom_game/hlw_ui/border2_png.vtex" />
+				<Panel id="agilityAttributeTint" class="attributeTint"/>
+				<Panel id="attributeHover" class="HoverOverlay" />
+			</Button>
+		</Panel>
+		<Panel>
+			<Button class="AttributeButton" onactivate="BuyAttribute('intelligence')" oncontextmenu="BuyAllAttributes('intelligence')">
+				<Image id="attributeImage" class="AttributeImage" src="s2r://panorama/images/custom_game/hlw_attributes/orb-wand_png.vtex" />
+				<Label id="intelligenceAttributeCost" class="AttributeGoldCost" text="100" />
+				<Image class="BorderImage" src="s2r://panorama/images/custom_game/hlw_ui/border2_png.vtex" />
+				<Panel id="intelligenceAttributeTint" class="attributeTint" />
+				<Panel id="attributeHover" class="HoverOverlay" />
+			</Button>
+		</Panel>
+	</Panel>
+</root>

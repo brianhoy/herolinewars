@@ -1,0 +1,73 @@
+//=================================================================================================================
+// Ability: Dragon Knight Dragon Tail
+//=================================================================================================================
+"hlw_dragon_knight_dragon_tail"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"  "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"  "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags" "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"AbilityUnitDamageType"  "DAMAGE_TYPE_MAGICAL"
+	"AbilityCastPoint"       "0.0"
+	"AbilityCastAnimation"   "ACT_DOTA_CAST_ABILITY_2"
+	"AbilityTextureName"	"dragon_knight_dragon_tail"
+
+	"AoERadius"               "%radius"
+    "AbilityDamage"           "50 75 125 200"
+    "AbilityManaCost"         "100 90 80 70"
+    "AbilityCooldown"         "10.0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"				"200 250 300 350"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage"				"50 75 125 200"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"knockback_time"		"0.5"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"knockback_distance"	"150"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stun_duration"			"2.5 2.75 3.0 3.25"
+		}
+	}
+	"OnSpellStart"
+	{
+		"Damage"
+		{
+			"Target"
+			{
+				"Center"  	"CASTER"
+				"Radius" 	"%radius"
+				"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			}
+			"Type"			"DAMAGE_TYPE_MAGICAL"
+			"Damage"		"%damage"
+		}
+		"RunScript"
+		{
+			"ScriptFile"	"abilities/heroes/dragon_knight/dragon_tail.lua"
+			"Function"		"ApplyKnockback"
+		}
+	}
+}

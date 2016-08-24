@@ -1,0 +1,119 @@
+//=================================================================================================================
+// Legion Commander: Gladiators Unite
+//=================================================================================================================
+"hlw_legion_commander_gladiators_unite"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityTextureName"			"legion_commander_duel"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags" "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0.3 0.3 0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"60.0 55.0 50.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150 200 250"
+
+	// Precache
+	"precache"
+	{
+		"particle"					"particles/frostivus_gameplay/legion_gladiators_ring.vpcf"
+		"soundfile"					"sounds/weapons/hero/legion_commander/duel_cast.vsnd"
+	}
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"625"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_armor_per_hero"		"5 7 9"
+		}
+		"03"
+		{	
+			"var_type"					"FIELD_INTEGER"
+			"bonus_damage_per_hero"		"50 100 150"
+		}
+		"04"
+		{	
+			"var_type"					"FIELD_INTEGER"
+			"lifesteal_per_hero"		"10 12 14"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"15.0"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"bonus_evasion"					"5.0 10.0 15.0"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"				"abilities/heroes/legion_commander/gladiators_unite.lua"
+			"Function"					"StartRing"
+			"particle"					"particles/frostivus_gameplay/legion_gladiators_ring.vpcf"
+		}
+		"FireSound"
+		{
+			"EffectName"				"Hero_LegionCommander.Duel.Cast"
+			"Target"					"CASTER"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_gladiator_visual"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsBuff"			"1"
+			"IsDebuff"			"0"
+			"IsPurgable"		"0"
+
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"abilities/heroes/legion_commander/gladiators_unite.lua"
+					"Function"			"AddLuaModifier"
+					"Target"			"TARGET"
+				}
+			}
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"abilities/heroes/legion_commander/gladiators_unite.lua"
+					"Function"			"RemoveLuaModifier"
+					"Target"			"TARGET"
+				}
+			}
+		}
+	}
+}

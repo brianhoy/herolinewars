@@ -63,7 +63,7 @@ function UpdateAbilityList()
 
 		// update the panel for the current unit / ability
 		var abilityPanel = m_AbilityPanels[ nUsedPanels ];
-		abilityPanel.data().SetAbility( ability, queryUnit, Game.IsInAbilityLearnMode() );
+		abilityPanel	.SetAbility( ability, queryUnit, Game.IsInAbilityLearnMode() );
 		
 		nUsedPanels++;
 	}
@@ -72,7 +72,7 @@ function UpdateAbilityList()
 	for ( var i = nUsedPanels; i < m_AbilityPanels.length; ++i )
 	{
 		var abilityPanel = m_AbilityPanels[ i ];
-		abilityPanel.data().SetAbility( -1, -1, false );
+		abilityPanel	.SetAbility( -1, -1, false );
 	}
 }
 

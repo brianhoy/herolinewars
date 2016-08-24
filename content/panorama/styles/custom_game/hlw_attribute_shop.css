@@ -1,0 +1,100 @@
+.root
+{
+	width:fit-children;
+	height: fit-children;
+	flow-children: right;
+	margin-left: 270px;
+}
+
+.AspectRatio4x3 .root
+{
+	margin-top: 44px;
+}
+
+.AspectRatio16x10 .root
+{
+	margin-left: 230px;
+}
+
+.Overlay
+{
+	width: 66px;
+	height: 66px;
+}
+
+.attributeTint
+{
+	width: 100%;
+	height: 100%;
+}
+
+.RedTint
+{
+	background-color: #7f0000;
+	opacity: 0.5;
+}
+
+.BlueTint
+{
+	background-color: #0048C4;
+	opacity: 0.5;
+}
+
+.AttributeButton
+{
+    width: 44px;
+    height: 44px;
+}
+
+.HoverOverlay
+{
+	width: 66px;
+	height: 66px;
+	background-color: #ffffff;
+	opacity: 0.0001;
+}
+
+.HoverOverlay:hover
+{
+	opacity: 0.2;
+}
+
+
+.AttributeButton:active
+{
+    transform: scaleX(0.96) scaleY(0.96);
+}
+
+.AttributeImage
+{
+    vertical-align: bottom;
+    horizontal-align: right;
+    margin-right: 3px;
+    margin-bottom: 3px;
+
+    width: 62px;
+    height: 62px;
+    opacity: 1;
+}
+
+.AttributeGoldCost
+{
+	color: #eeeeee;
+    font-size: 11px;
+    font-weight: bold;
+	text-shadow: 0px 0px 6px 7 #ADA11D;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	
+	vertical-align: bottom;
+	horizontal-align: right;
+}
+
+.BorderImage
+{
+    vertical-align: bottom;
+    horizontal-align: left;
+    
+    width: 60px;
+    height: 60px;
+}

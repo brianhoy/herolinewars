@@ -28,6 +28,7 @@ require("hlw_functions")
 require("hlw_attributes")
 require("hlw_creeps")
 require("hlw_creep_ai")
+require("hlw_damage_filter")
 
 function GameMode:PostLoadPrecache()
 end
@@ -44,8 +45,8 @@ function GameMode:OnHeroInGame(hero)
 	local team = hero:GetTeamNumber()
 	print("[HLW]  Spawning hero for player " .. playerID)
 
-	-- Ends the function if hero is a controller or if the NPC"s playerID has already been started
-	if hero:GetClassname() == "npc_dota_hero_abyssal_underlord" then
+	-- Ends the function if hero is a controller or if the NPC's playerID has already been started
+	if hero:GetClassname() == "npc_dota_hero_jakiro" then
 		return
 	end
 	if GameMode.StartedPlayerIDs[playerID] == true then
@@ -65,15 +66,15 @@ function GameMode:OnHeroInGame(hero)
 	GameMode.PlayerCounts[hero:GetTeamNumber()] = TeamCount
 	GameMode.ControllerIncreaseManaCost[playerID] = GameMode.ControllerInitialIncreaseManaCost
 
-	-- This code removes the player"s hero, creates a new one that is the exact same, creates a controller, then sets them all to the correct position
+	-- Create a controller (must do some funky things to get the ownership right)
 	local player = PlayerResource:GetPlayer(playerID)	
-
-	local unit = CreateUnitByName("npc_dota_hero_abyssal_underlord", Vector(0, 0, 0), false, nil, nil, team)
+	local unit = CreateUnitByName("npc_dota_hero_jakiro", Vector(0, 0, 0), false, nil, nil, team)
 
 	hero:SetControllableByPlayer(playerID, true)
 	hero:SetPlayerID(playerID)
 	unit:SetControllableByPlayer(playerID, true)
 	unit:SetPlayerID(playerID)
+
 	local teams_ = {  }
 	teams_[DOTA_TEAM_GOODGUYS] = "good"
 	teams_[DOTA_TEAM_BADGUYS] = "bad"
@@ -102,7 +103,7 @@ function GameMode:OnHeroInGame(hero)
 		end
 	end)
 
-	-- Notification that appears when a player doesn"t send creeps
+	-- Notification that appears when a player doesn't send creeps
 	local sndCrpNtfctnItr = 0
 	Timers:CreateTimer(60, function()
 		if GameMode.PlayerIncomes[playerID] < 3 then
@@ -117,10 +118,11 @@ function GameMode:OnHeroInGame(hero)
 		end
 	end)
 
-	-- Leveling all the controller"s abilities to level 1
+	-- Leveling all the controller's abilities to level 1
 	for i = 1, 5 do
 		unit:HeroLevelUp( false)
 	end
+
 	for i = 0, unit:GetAbilityCount() - 1 do
 		local ability = unit:GetAbilityByIndex(i)
 		if ability ~= nil then
@@ -128,11 +130,11 @@ function GameMode:OnHeroInGame(hero)
 		end
 	end
 
-	-- Silencing and making invulnerable the controller
+	-- Silencing and making the controller invulnerable
 	unit:SetMana(0)
 	unit:AddNewModifier(unit, nil, "modifier_invulnerable", {duration=-1})
 	Timers:CreateTimer(0.9, function()
-		if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+		if GameRules:State_Get() ~= DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 			unit:AddNewModifier(unit, nil, "modifier_silence", {duration=-1})
 			return 1
 		else
@@ -167,7 +169,7 @@ function GameMode:OnHeroInGame(hero)
 
 	-- Levels up the controller every 90 seconds
 	local i = 0
-	Timers:CreateTimer(60.0, function()
+	Timers:CreateTimer(90.0, function()
 		i = i + 1
 		hero.unit:HeroLevelUp(false)
 		if hero.unit:GetLevel() >= 24 then
@@ -176,7 +178,6 @@ function GameMode:OnHeroInGame(hero)
 			return 90.0
 		end
 	end)
-
 end
 
 function GameMode:OnGameInProgress()
@@ -264,6 +265,7 @@ function GameMode:InitGameMode()
 	GameMode:HInitGameMode()
 		
 	GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( GameMode, "ExecuteOrderFilter" ), GameMode )
+	GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, "DamageFilter"), GameMode )
 
 	GameMode.AttributeLevels = {}
 	
@@ -342,7 +344,7 @@ function GameMode:InitGameMode()
 		150, 180, 210, 230, 270, 310, 350, 400, 450, 500,
 
 		-- Level 3
-		500, 560, 620, 680, 750, 1000, 2500, 5000, 8000, 10000
+		500, 560, 620, 680, 750, 1000, 4000, 7000, 12000, 16000
 	}
 
 	GameMode.CreepIncome = {
@@ -353,7 +355,7 @@ function GameMode:InitGameMode()
 		9.5, 11, 12.5, 14, 15.5, 17, 18.5, 20, 22, 24,
 
 		-- Level 3
-		26, 28.5, 31, 33.5, 36, 38, 41, 44, 47, 50
+		26, 28.5, 31, 33.5, 36, 38, 45, 50, 54, 60
 	}
 
 	GameMode.StartingGold = 15

@@ -16,11 +16,11 @@ end
 
 function GameMode:GetAttributeCost(attribute, hero)
 	if attribute == "strength" then
-		return (hero.strength_bonus * 50) + 100
+		return (hero.strength_bonus * 10) + 100
 	elseif attribute == "agility" then
-		return (hero.agility_bonus * 50) + 100
+		return (hero.agility_bonus * 10) + 100
 	elseif attribute == "intelligence" then
-		return (hero.intelligence_bonus * 50) + 100
+		return (hero.intelligence_bonus * 10) + 100
 	end
 end
 

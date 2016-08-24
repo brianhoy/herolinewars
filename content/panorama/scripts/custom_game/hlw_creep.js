@@ -96,7 +96,7 @@ function BuyAllCreeps()
 	m_pnlCreepCost = $("#creepCost");
 	m_pnlCreepCharges = $("#creepCharges");
 	m_pnlCreepTint = $("#creepTint");
-	$.GetContextPanel().data().BuildCreepButton = BuildCreepButton;
-	$.GetContextPanel().data().Update = UpdateCreepButton;
+	$.GetContextPanel().BuildCreepButton = BuildCreepButton;
+	$.GetContextPanel().Update = UpdateCreepButton;
 	m_PlayerID = Players.GetLocalPlayer();
 })();

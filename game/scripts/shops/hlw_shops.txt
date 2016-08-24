@@ -136,6 +136,7 @@
 		"item"		"item_butterfly"
 		"item"		"item_rapier"
 		"item"		"item_abyssal_blade"
+		"item"		"item_hlw_portal"
 	}
 	
 	// Level 4 - Orange / Orb / Artifacts

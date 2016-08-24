@@ -1,0 +1,69 @@
+//=================================================================================================================
+// Controller Ability: Crushing Wave 
+// Sends a gigantic wave which deals damage to each enemy land unit in a line.
+//=================================================================================================================
+"hlw_controller_crushing_wave"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+
+	"MaxLevel"						"4"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"morphling_waveform"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"particle"		"particles/units/heroes/hero_morphling/morphling_waveform_splash_f.vpcf"
+
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_morphling.vsndevts"
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts"
+
+	}
+
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0"
+	"AbilityCooldown"				"60"
+	"AbilityManaCost"				"800"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"abilities/controller/crushing_wave.lua"
+			"Function"		"send_wave"
+			"Target"		"POINT"
+			"Damage"		"%damage"
+		}	
+	}
+	"Modifiers"
+	{
+		"dummy_modifier"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"IsDebuff"			"0"
+		}
+	}
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage"				"300 500 700 1200"
+		}
+	}
+}
