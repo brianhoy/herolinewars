@@ -237,7 +237,7 @@ function GameMode:OnEntityKilled( keys )
 		GameMode.TeamCreepCounts[killedUnit:GetTeamNumber()] = GameMode.TeamCreepCounts[killedUnit:GetTeamNumber()] - 1
 	end
 	-- Put code here to handle when an entity gets killed
-	if killerEntity.IsRealHero and killerEntity:IsRealHero() then
+	if killerEntity and killerEntity.IsRealHero and killerEntity:IsRealHero() then
 		CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(killerEntity:GetPlayerID()), "UpdateButtonStatuses", GameMode:GetButtonUpdateData(killerEntity:GetPlayerID()) )
 	end
 end

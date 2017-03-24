@@ -4,6 +4,7 @@ var m_CreepPanels = [];
 var m_PlayerID = Players.GetLocalPlayer();
 var m_UpgradePanel;
 var m_Level;
+var Hud = $.GetContextPanel().GetParent().GetParent().GetParent();
 
 function UpdateButtonStatuses(data)
 {
@@ -31,6 +32,8 @@ function SetButtonConfig(data)
 	var playeraa = Players.GetLocalPlayer();
 	GameEvents.SendCustomGameEventToServer( "OnRecievedCreepPanorama", { PlayerID: playeraa });
 	
+	
+
 	m_UpgradePanel = null;
     m_Level = data.level;
     var CreepCosts = data.CreepCosts;
@@ -89,6 +92,8 @@ function SetButtonConfig(data)
 (function () {
     GameEvents.Subscribe( "UpdateButtonStatuses", UpdateButtonStatuses);
     GameEvents.Subscribe( "SetButtonConfig", SetButtonConfig);
+
+	$.GetContextPanel().SetParent(Hud);
 	m_PlayerID = Players.GetLocalPlayer();
 })();
 

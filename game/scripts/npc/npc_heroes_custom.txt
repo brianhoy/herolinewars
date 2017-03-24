@@ -154,7 +154,8 @@
 		
 		"Ability1"					"holdout_dragon_slave"
 		"Ability2"					"holdout_light_strike_array"
-		"Ability3"					"holdout_fiery_soul"				
+		"Ability3"					"holdout_fiery_soul"
+		"Ability4"					"hlw_lina_laguna_blade"				
 	}
 	//=================================================================================================================
 	// HERO: Magnus
@@ -188,8 +189,16 @@
 	"npc_dota_hero_omniknight_holdout"
 	{
 		"override_hero"			"npc_dota_hero_omniknight"
+		"Ability2"				"hlw_omniknight_repel"
 		"Ability3"				"holdout_degen_aura"
 		"Ability4"				"holdout_guardian_angel"
+	}
+	//=================================================================================================================
+	// HERO: Huskar
+	//=================================================================================================================
+	"npc_dota_hero_phantom_assassin_hlw"
+	{
+		"override_hero"		"npc_dota_hero_phantom_assassin"
 	}
 	//=================================================================================================================
 	// HERO: Queen of Pain

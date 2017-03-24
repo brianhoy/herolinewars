@@ -41,7 +41,7 @@
 	
 	// Damage.
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"14 20 26 36"
+	"AbilityDamage"					"30 40 50 60"
 	"AbilityDuration"				"10"
 	
 	// Stats
@@ -96,7 +96,7 @@
 		"09"
 		{
 			"var_type"			"FIELD_FLOAT"
-			"slow_1_duration"	"3 2 1 1"
+			"slow_1_duration"	"4 6 8 10"
 		}
 		"10"
 		{
@@ -111,7 +111,7 @@
 		"12"
 		{
 			"var_type"			"FIELD_FLOAT"
-			"damage_duration"	"7"
+			"damage_duration"	"7 8 9 10"
 		}
 		"13"
 		{
@@ -135,7 +135,7 @@
 
 		"RunScript"
 		{
-			"ScriptFile"		"abilities/dazzle/poison_touch.lua"
+			"ScriptFile"		"abilities/heroes/dazzle/poison_touch.lua"
 			"Function"			"ThrowPoisonProjectile"
 			"Target"				"POINT"
 		}

@@ -1,4 +1,4 @@
-BAREBONES_DEBUG_SPEW = false 
+BAREBONES_DEBUG_SPEW = true 
 
 if GameMode == nil then
 		DebugPrint( "[BAREBONES] creating barebones game mode" )
@@ -244,6 +244,8 @@ function GameMode:OnGameInProgress()
 end
 
 function GameMode:InitGameMode()
+	print("Started Initializing")
+
 	GameMode = self
 	
 	local locations = {
@@ -418,6 +420,7 @@ function GameMode:InitGameMode()
 	Convars:RegisterCommand( "RebuildPanoramaUI", Dynamic_Wrap(GameMode, "RebuildPanoramaUI"), "Rebuilds panorama interface", FCVAR_CHEAT )
 	Convars:RegisterCommand( "TestNettable", Dynamic_Wrap(GameMode, "TestNettable"), "Tests a given nettable", FCVAR_CHEAT )
 
+	print("Done Initializing")
 end
 
 function GameMode:SetWaypointEnts(team, side)

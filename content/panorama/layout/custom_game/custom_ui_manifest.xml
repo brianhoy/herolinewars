@@ -47,10 +47,10 @@
     <!-- CustomUIElements go here.  They are not provided currently as valve's parser reads commented lines and attempts to link them in.-->
     <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/barebones_hud_base.xml" /> 
     <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/hlw_creeps.xml" />
-    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/hlw_incomes.xml" />
-	<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/hlw_tutorial_arrow.xml" />
-	<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/hlw_attribute_shop.xml" />
-    <CustomUIElement type="GameInfo" layoutfile="file://{resources}/layout/custom_game/hlw_game_info.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/hlw_incomes.xml" /> 
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/hlw_tutorial_arrow.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/hlw_attribute_shop.xml" />
+    <CustomUIElement type="GameInfo" layoutfile="file://{resources}/layout/custom_game/hlw_game_info.xml" /> 
 
 
     <!-- Valve-provided Multiteam elements -->

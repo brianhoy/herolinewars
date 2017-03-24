@@ -41,8 +41,6 @@ function ThrowPoisonProjectile(keys)
 	-- Creates a new particle effect
 	local end_projectile = false
 
-	print("projectile duration", projectile_duration)
-
 	Timers:CreateTimer(function()
 
 			if end_projectile then

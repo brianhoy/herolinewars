@@ -17,7 +17,7 @@
 	"npc_dota_hero_templar_assassin"	"1"
 	"npc_dota_hero_phantom_assassin"	"1"
 	"npc_dota_hero_legion_commander"	"1" // Ulti is bugged
-	"npc_dota_hero_witch_doctor"		"1" // Ulti is not holdout-optimized
+	//"npc_dota_hero_witch_doctor"		"1" // broken since 7.00
 	"npc_dota_hero_drow_ranger"			"1"
 
 	// Allowed Normal

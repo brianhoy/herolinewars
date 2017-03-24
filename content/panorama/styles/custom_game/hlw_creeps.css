@@ -3,10 +3,11 @@
     flow-children: right;
 		
 
-    margin-right: 20%;
+    margin-left: 27%;
     margin-bottom: 20%;
 	vertical-align: bottom;
-    horizontal-align: right;
+    horizontal-align: left;
+    z-index: -1;
 }
 
 .ButtonRowVertical

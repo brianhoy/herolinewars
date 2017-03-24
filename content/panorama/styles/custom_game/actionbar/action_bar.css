@@ -1,5 +1,6 @@
 .AbilityOverlayRoot
-{
+{ 	z-index: -9999;
+	z-index: -9999;
 	horizontal-align: left;
 	vertical-align: top;
 	margin-top: 50px;
@@ -8,14 +9,14 @@
 }
 
 #ability_list
-{
+{ 	z-index: -9999;
 	flow-children: down-wrap;
 	border: 2px solid black;
 	background-color: #272823;
 }
 
 .AbilityPanel
-{
+{ 	z-index: -9999;
 	margin-left: 8px;
 	margin-right: 8px;
 	margin-top: 4px;
@@ -23,12 +24,12 @@
 }
 
 .AbilityPanel.no_ability
-{
+{ 	z-index: -9999;
 	visibility: collapse;
 }
 
 #LevelUpButton
-{
+{ 	z-index: -9999;
 	border: 1px solid black;
     background-color: #c4a529;
 	width: 114px;
@@ -38,17 +39,17 @@
 }
 
 .could_level_up #LevelUpButton
-{
+{ 	z-index: -9999;
 	visibility: visible;
 }
 
 #LevelUpButton:hover
-{
+{ 	z-index: -9999;
     background-color: #9e8b2c;
 }
 
 #LevelUpButtonInset
-{
+{ 	z-index: -9999;
 	width: 100%;
 	height: 100%;
 	border: 2px solid black;
@@ -57,12 +58,12 @@
 }
 
 #LevelUpButton:hover #LevelUpButtonInset
-{
+{ 	z-index: -9999;
     background-color: gradient( linear, 0% 0%, 0% 100%, from( #ffffff ), color-stop( 0.2, #c4a529 ), color-stop( 0.75, #9e8b2c ), color-stop( 0.8, #c4a529 ), to( #ffffff ) );
 }
 
 #LevelUpButton Label
-{
+{ 	z-index: -9999;
 	text-transform: uppercase;
 	text-shadow: 0px 1px 3px 2.5 #000000;
 	color: white;
@@ -71,83 +72,83 @@
 }
 
 #ButtonAndLevel
-{
+{ 	z-index: -9999;
 	flow-children: down;
 }
 
 #AbilityButton
-{
+{ 	z-index: -9999;
 	width: 60px;
 	height: 60px;
 	border: 2px solid transparent;
 }
 
 .is_passive #AbilityButton
-{
+{ 	z-index: -9999;
 	border: 2px solid #00000000;
 }
 
 #UpgradeBorder
-{
+{ 	z-index: -9999;
 	background-color: transparent;
 }
 
 .learnable_ability #UpgradeBorder
-{
+{ 	z-index: -9999;
    background-color: gradient( linear, 0% 0%, 0% 100%, from( #ffffff ), color-stop( 0.1, #c4a529 ), color-stop( 0.75, #9e8b2c ), color-stop( 0.9, #c4a529 ), to( #ffffff ) );
 }
 
 #AbilityButton:hover
-{
+{ 	z-index: -9999;
 	border: 2px solid white;
 }
 
 #AbilityButton:active
-{
+{ 	z-index: -9999;
 	border: 4px solid white;
 }
 
 .no_level DOTAAbilityImage
-{
+{ 	z-index: -9999;
 	saturation: 0;
 	wash-color: #303030;
 }
 
 .insufficient_mana DOTAAbilityImage
-{
+{ 	z-index: -9999;
 	saturation: 0;
 	wash-color: #1569be;
 }
 
 .potential_upgrade.no_level DOTAAbilityImage
-{
+{ 	z-index: -9999;
 	saturation: 1;
 	wash-color: white;
 }
 
 #AbilityStatusBorder
-{
+{ 	z-index: -9999;
 	border: 2px solid transparent;
 }
 
 .auto_cast_enabled #AbilityStatusBorder
-{
+{ 	z-index: -9999;
 	border: 4px solid orange;
 }
 
 .toggle_enabled #AbilityStatusBorder
-{
+{ 	z-index: -9999;
 	border: 4px solid green;
 }
 
 #AbilityLevelContainer
-{
+{ 	z-index: -9999;
 	horizontal-align: center;
 	flow-children: right;
 }
 
 .LevelPanel
-{
+{ 	z-index: -9999;
 	width: 12px;
 	height: 12px;
 	margin-left: 1px;
@@ -160,7 +161,7 @@
 }
 
 .active_level.LevelPanel
-{
+{ 	z-index: -9999;
 	background-color: #ceaa31;
 	border: 2px solid #734918;
 }

@@ -7,5 +7,6 @@
 	
 	"Ability1"					"holdout_dragon_slave"
 	"Ability2"					"holdout_light_strike_array"
-	"Ability3"					"holdout_fiery_soul"				
+	"Ability3"					"holdout_fiery_soul"
+	"Ability4"					"hlw_lina_laguna_blade"				
 }

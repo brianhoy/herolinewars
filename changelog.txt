@@ -1,16 +1,16 @@
 - Controller
 	- Blizzard: Fixed bug where it wouldn't damage units, and lowered damage.
 - Bonus Magic Damage from Intelligence Stats
-	- For every 2 intellect, the damage is amplified by an extra percent (On top of the base amp provided by dota)
+	- For every 2 intellect, the damage is amplified by an extra percentage point (On top of the base amp provided by dota)
 
-- Abaddon (do tooltips)
+- Abaddon
 	- Mist Coil: Now deals damage based on how much HP the enemy creep is missing
 	- Curse of Avernus: Now gives more bonus attack speed (300 at level 4)
 - Bristleback
 	- Quill Spray: Increased max damage to 20,000, decreased cooldown increased stack damage, and increased stack duration to 100s
 - Dazzle
-	- Poison Touch: Now a point target physics projectile rather than a unit target ability (Do Tooltips)
-	- Shadow Wave: Can now target enemies (Do tooltips)
+	- Poison Touch: Now a point target physics projectile rather than a unit target ability 
+	- Shadow Wave: Can now target enemies
 	- Shallow Grave: Now has a global cast range
 - Dragon Knight
 	- Breathe Fire: Increased AOE and longer range
@@ -28,7 +28,22 @@
 - Kunkka
 	- X Marks the Spot: Now is a point target that mesmorizes nearby creeps, making them walk an x and stand still for a couple seconds
 - Legion Commander
-	- Gladiators, Unite!: Rewrote the ability (which was previously hardcoded in C++ for Valve's holdout gamemode) in lua so that the particle effect worked (some update broke the particle effects of every holdout ability)
-	- Gladiators, Unite!: Now gives evasion
+	- Gladiators, Unite!: Rewrote the ability (which was previously hardcoded in C++ for Valve's holdout gamemode) in lua so that the particle effect worked (an update broke the particle effects of every holdout ability)
+	- Gladiators, Unite!: Now gives up to 15% evasion (not increased by amount of heroes in the ring)
+- Lich
+	- Frost Armor: Armor bonus rescaled from 3 5 7 9 to 5 10 15 20
+	- Sacrifice: Now has a much longer cooldown but can target enemy creeps
+- Lina
+	- Laguna Blade: Now a channeled ability that uses mana to damage nearby units
+- Omniknight
+	- Repel: Now gives up to 11 bonus armor
+- Phantom Assassin
+	- Phantom Strike: Increased range to 2000 and at level 4 and 5 lasts for 5 attacks
+
 
 -createhero npc_dota_unit_hlw_level29 enemy
+
+- Bugs
+Hero pick screen shows when connecting
+Strategy time doesn't show time
+Icons are shifted to the right

@@ -1,6 +1,7 @@
 "use strict";
 
 var Collapsed = false;
+var Hud = $.GetContextPanel().GetParent().GetParent().GetParent();
 
 function Collapse()
 {
@@ -101,6 +102,8 @@ function StartIncomeBar(keys)
 (function () {
     GameEvents.Subscribe( "StartIncomeBar", StartIncomeBar);
 	CustomNetTables.SubscribeNetTableListener("income", OnTableChanged);
+
+	$.GetContextPanel().SetParent(Hud);
 
 	// Update all nettable values
 	$.Schedule(5, ReadAllNettableValues);
