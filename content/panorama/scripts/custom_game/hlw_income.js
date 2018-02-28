@@ -31,14 +31,14 @@ function Collapse()
 
 function OnTableChanged(table_name, key, data)
 {
-	$.Msg(CustomNetTables.GetAllTableValues("income"));
+//	$.Msg(CustomNetTables.GetAllTableValues("income"));
 	if(table_name != "income")
 	{
 		return;
 	}
 	var panel = $("#Player_" + key + "_" + "Gold");
 	
-	$.Msg("panel = " + panel)
+//	$.Msg("panel = " + panel)
 	
 	if(panel === null)
 	{

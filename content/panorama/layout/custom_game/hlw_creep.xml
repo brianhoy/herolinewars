@@ -13,8 +13,6 @@
 			<Image class="BorderImage" src="file://{images}/custom_game/hlw_ui/border2.png" />
 			<Panel id="creepTint" />
 			<Panel id="creepHover" class="HoverOverlay" />
-
 		</Button>
-
 	</Panel>
 </root>

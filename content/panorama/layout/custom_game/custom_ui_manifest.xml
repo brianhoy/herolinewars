@@ -41,6 +41,10 @@
 
 	GameUI.CustomUIConfig().team_logo_large_xml = "file://{resources}/layout/custom_game/overthrow_team_icon_large.xml";
 
+
+    var Chat = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("HudChat");
+        Chat.style.marginBottom = "7%";
+        Chat.style.width = "652px";
   </script>
 
   <Panel>

@@ -9085,7 +9085,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bounces_tooltip"				"2 4 6 8"
+				"bounces_tooltip"		"2 4 6 8"
 			}
 		}
 	}	

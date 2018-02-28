@@ -31,9 +31,9 @@ function BaseTriggered(keys)
 				Queue = 0 --Optional.  Used for queueing up abilities
 			}
 
-				ExecuteOrderFromTable(newOrder)
-				return nil
-			end)
+			ExecuteOrderFromTable(newOrder)
+			return nil
+		end)
 	end
 end
 
@@ -124,7 +124,6 @@ function EnsureRightSide(unit)
 			end
 		end)
 	end
-
 end
 
 function PunishPlayer(unit)

@@ -10,7 +10,7 @@ function UpdateButtonStatuses(data)
 {
     var PlayerGold = data.PlayerGold;
     var PlayerCharges = data.PlayerCharges;
-	
+
 	if(m_Level == 3)
 	{
 		for(var i = 1; i <= 10; i++)
@@ -31,34 +31,30 @@ function SetButtonConfig(data)
 {
 	var playeraa = Players.GetLocalPlayer();
 	GameEvents.SendCustomGameEventToServer( "OnRecievedCreepPanorama", { PlayerID: playeraa });
-	
-	
 
 	m_UpgradePanel = null;
     m_Level = data.level;
     var CreepCosts = data.CreepCosts;
 	var CreepCharges = data.CreepCharges
     var CreepImagePaths = data.CreepImagePaths;
-	
+
     var i = 0;
     var contextPanel = $.GetContextPanel();
 	var childCount = contextPanel.GetChildCount();
 	var length = m_CreepPanels.length
-	
+
 	for(var j = 0; j < length; j++)
 	{
 		var panel = m_CreepPanels.pop();
 		panel.RemoveAndDeleteChildren();
 		panel.DeleteAsync(0);
 	}
-	
+
 	if(m_Level == 3)
 	{
 		i = 1;
 	}
-	
-	var contextPanel = $.GetContextPanel();
-	
+
     for(i; i <= 10; i++)
     {
 		var panel = $.CreatePanel("Panel", contextPanel, "creep_" + i);
