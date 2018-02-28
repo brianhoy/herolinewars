@@ -79,7 +79,7 @@ function GameMode:SpawnCreep(factor, caster)
 	FindClearSpaceForUnit(unit, spawnLoc, true)
 	GameMode:ApplyStats(unit, factor)
 
-	print("Team: ", caster:GetOpposingTeamNumber(), " side: ", random)
+--	print("Team: ", caster:GetOpposingTeamNumber(), " side: ", random)
 	GameMode:QueueWaypoints(unit, GameMode.WaypointEnts[caster:GetOpposingTeamNumber()][random])
 
 	unit:SetAdditionalBattleMusicWeight(factor*10)

@@ -1,7 +1,15 @@
 "AddonInfo"
 {
 	"TeamCount"		"2"
-	"hlw_map_1"
+
+	"maps"			"hlw_1v1 hlw"
+	"IsPlayable"	"1"
+	"hlw_1v1"
+	{
+		"MaxPlayers"		"2"
+	}
+
+	"hlw"
 	{
 		"MaxPlayers"		"12"
 	}

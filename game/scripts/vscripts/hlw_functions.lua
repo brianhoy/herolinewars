@@ -70,10 +70,10 @@ function GameMode:GetButtonUpdateData(PlayerID)
 		PlayerCharges = {},
 	}
 	
-	for i = 1, 10 do
+	for i = 1, PlayerResource:GetPlayerCount() do
 		data.PlayerCharges[i] = GameMode.PlayerCharges[PlayerID][i + (10 * (GameMode.PlayerLevels[PlayerID] - 1))]
 	end
-	
+
 	return data
 end
 
@@ -90,7 +90,7 @@ function GameMode:GetIncomeTableData()
 		data[PlayerID].Team = PlayerResource:GetTeam(PlayerID)
 		size = size + 1
 	end
-	
+
 	data.size = size
 	
 	return data
@@ -101,7 +101,6 @@ function GameMode:InitializeCreepPanoramaForPlayer(PlayerID)
 
 	local player = PlayerResource:GetPlayer(PlayerID)
 	local i = 0
-
 
 	Timers:CreateTimer(0.1, function()
 		i = i + 1

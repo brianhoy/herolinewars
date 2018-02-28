@@ -1,8 +1,8 @@
 BAREBONES_DEBUG_SPEW = true 
 
 if GameMode == nil then
-		DebugPrint( "[BAREBONES] creating barebones game mode" )
-		_G.GameMode = class({})
+	DebugPrint( "[BAREBONES] creating barebones game mode" )
+	_G.GameMode = class({})
 end
 
 require("libraries/timers")
@@ -120,7 +120,7 @@ function GameMode:OnHeroInGame(hero)
 
 	-- Leveling all the controller's abilities to level 1
 	for i = 1, 5 do
-		unit:HeroLevelUp( false)
+		unit:HeroLevelUp(false)
 	end
 
 	for i = 0, unit:GetAbilityCount() - 1 do
@@ -201,7 +201,6 @@ function GameMode:OnGameInProgress()
 		GameRules:SendCustomMessage(tostring(GameMode.MaxCreepCountPerTeam), 0, 0)
 		GameRules:SendCustomMessage("#hlw_setting_max_creep_charges", 0, 0)
 		GameRules:SendCustomMessage(tostring(GameMode.MaxCharges), 0, 0)
-
 	end)
 
 	-- After a certain time stored in a variable, Sudden Death phase starts
@@ -209,11 +208,11 @@ function GameMode:OnGameInProgress()
 		GameMode:StartSuddenDeath()
 
 		for PlayerID, _ in pairs(GameMode.PlayerIncomes) do
-				local hero = PlayerResource:GetSelectedHeroEntity(PlayerID)
-				local item = CreateItem("item_hlw_portal", hero, hero)
-				local container = CreateItemOnPositionForLaunch(hero:GetAbsOrigin(), item)
-				container:SetRenderColor(255, 100, 100)
-				item:LaunchLoot(false, 200, 0.9, hero:GetAbsOrigin() + RandomVector(200))
+			local hero = PlayerResource:GetSelectedHeroEntity(PlayerID)
+			local item = CreateItem("item_hlw_portal", hero, hero)
+			local container = CreateItemOnPositionForLaunch(hero:GetAbsOrigin(), item)
+			container:SetRenderColor(255, 100, 100)
+			item:LaunchLoot(false, 200, 0.9, hero:GetAbsOrigin() + RandomVector(200))
 		end
 		return nil
 	end)
@@ -247,25 +246,14 @@ function GameMode:InitGameMode()
 	print("Started Initializing")
 
 	GameMode = self
-	
-	local locations = {
-		Vector(-3000, 3000, 0),
-		Vector(3000, 3000, 0),
-		Vector(-3000, -3000, 0),
-		Vector(3000, -3000, 0)
-	}
-
-	for k, v in pairs(locations) do
-		AddFOWViewer(DOTA_TEAM_GOODGUYS, v, 10000, -1, false)
-		AddFOWViewer(DOTA_TEAM_BADGUYS, v, 10000, -1, false)
-	end
 
 	GameMode.DebugMode = false
 	GameMode.ConnectedPlayerIDs = {}
 
 	GameMode:_InitGameMode()
 	GameMode:HInitGameMode()
-		
+
+	GameRules:GetGameModeEntity():SetFogOfWarDisabled(true)
 	GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( GameMode, "ExecuteOrderFilter" ), GameMode )
 	GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, "DamageFilter"), GameMode )
 
@@ -374,14 +362,20 @@ function GameMode:InitGameMode()
 	GameMode.AncientPosition[DOTA_TEAM_GOODGUYS] = Entities:FindAllByName("hlw_good_ancient")[1]:GetAbsOrigin()
 	GameMode.AncientPosition[DOTA_TEAM_BADGUYS] = Entities:FindAllByName("hlw_bad_ancient")[1]:GetAbsOrigin()
 
-
-
 	GameMode.ControllerLocations = {}
 	GameMode.ControllerLocations[DOTA_TEAM_GOODGUYS] = {}
 	GameMode.ControllerLocations[DOTA_TEAM_BADGUYS] = {}
-	for i = 1, 6 do
-		GameMode.ControllerLocations[DOTA_TEAM_GOODGUYS][i] = (Entities:FindAllByName("hlw_good_controller_" .. tostring(i))[1]):GetAbsOrigin()
-		GameMode.ControllerLocations[DOTA_TEAM_BADGUYS][i] = (Entities:FindAllByName("hlw_bad_controller_" .. tostring(i))[1]):GetAbsOrigin()
+	if GetMapName() == "hlw" then
+		for i = 1, 6 do
+			GameMode.ControllerLocations[DOTA_TEAM_GOODGUYS][i] = (Entities:FindAllByName("hlw_good_controller_" .. tostring(i))[1]):GetAbsOrigin()
+			GameMode.ControllerLocations[DOTA_TEAM_BADGUYS][i] = (Entities:FindAllByName("hlw_bad_controller_" .. tostring(i))[1]):GetAbsOrigin()
+		end
+	elseif GetMapName() == "hlw_1v1" then
+		GameMode.ControllerLocations[DOTA_TEAM_GOODGUYS][1] = (Entities:FindAllByName("hlw_good_controller_1")[1]):GetAbsOrigin()
+		GameMode.ControllerLocations[DOTA_TEAM_BADGUYS][1] = (Entities:FindAllByName("hlw_bad_controller_1")[1]):GetAbsOrigin()
+
+		GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_GOODGUYS, 1)
+		GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, 1)
 	end
 
 	GameMode.PlayerCounts = {}
@@ -391,7 +385,6 @@ function GameMode:InitGameMode()
 	GameMode.CreepSpawnPoints = {}
 	GameMode.CreepSpawnPoints[DOTA_TEAM_GOODGUYS] = {}
 	GameMode.CreepSpawnPoints[DOTA_TEAM_BADGUYS] = {}
-
 
 	GameMode.CreepSpawnPoints[DOTA_TEAM_GOODGUYS][1] = Entities:FindAllByName("hlw_good_bot_spawn")[1]
 	GameMode.CreepSpawnPoints[DOTA_TEAM_GOODGUYS][2] = Entities:FindAllByName("hlw_good_top_spawn")[1]
@@ -414,7 +407,11 @@ function GameMode:InitGameMode()
 		end
 	end
 
-	GameRules:GetGameModeEntity():SetCameraDistanceOverride( 1350 )
+	GameRules:GetGameModeEntity():SetCameraDistanceOverride(1350)
+	GameRules:SetStrategyTime(0.0)
+	GameRules:SetShowcaseTime(0.0)
+	GameRules:SetCustomGameSetupAutoLaunchDelay(15.0)
+	GameRules:LockCustomGameSetupTeamAssignment(true)
 
 	-- Commands 
 	Convars:RegisterCommand( "RebuildPanoramaUI", Dynamic_Wrap(GameMode, "RebuildPanoramaUI"), "Rebuilds panorama interface", FCVAR_CHEAT )

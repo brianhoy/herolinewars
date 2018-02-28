@@ -10,15 +10,16 @@
 
 	// Allowed Holdout
 	"npc_dota_hero_axe"					"1"
-	"npc_dota_hero_windrunner"			"1"
-	"npc_dota_hero_omniknight"			"1"
-	"npc_dota_hero_juggernaut"			"1"
-	"npc_dota_hero_lina"				"1"
-	"npc_dota_hero_templar_assassin"	"1"
-	"npc_dota_hero_phantom_assassin"	"1"
-	"npc_dota_hero_legion_commander"	"1" // Ulti is bugged
-	//"npc_dota_hero_witch_doctor"		"1" // broken since 7.00
+	"npc_dota_hero_crystal_maiden"		"1"
 	"npc_dota_hero_drow_ranger"			"1"
+	"npc_dota_hero_juggernaut"			"1"
+	"npc_dota_hero_legion_commander"	"1" // Ulti is bugged
+	"npc_dota_hero_lina"				"1"
+	"npc_dota_hero_omniknight"			"1"
+	"npc_dota_hero_phantom_assassin"	"1"
+	"npc_dota_hero_templar_assassin"	"1"
+	"npc_dota_hero_windrunner"			"1"
+	"npc_dota_hero_witch_doctor"		"1" // broken since 7.00
 
 	// Allowed Normal
 	"npc_dota_hero_antimage"			"1"
@@ -57,7 +58,6 @@
 	"npc_dota_hero_magnataur"			"0" // Friendly skewer is bugged
 	"npc_dota_hero_venomancer"			"0" // Wards are bugged
 	"npc_dota_hero_queenofpain"			"0" // 1st ability is bugged
-	"npc_dota_hero_crystal_maiden"		"0"
 	"npc_dota_hero_shadow_shaman"		"0"
 	"npc_dota_hero_sand_king"			"0" // OP
 

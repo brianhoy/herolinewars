@@ -9,8 +9,6 @@ function GameMode:OnDisconnect(keys)
 	local playerID = keys.PlayerID
 end
 
-
-
 function GameMode:OnGameRulesStateChange(keys)
 	GameMode:HLWPrint("OnGameRulesStateChange")
 
@@ -20,18 +18,15 @@ function GameMode:OnGameRulesStateChange(keys)
 
 	if newState == DOTA_GAMERULES_STATE_PRE_GAME then
 		Timers:CreateTimer(1, function()
-			local centerMessage =  { message = "#hlw_tutorial_message_controller", duration = 5 }
-			FireGameEvent("show_center_message", centerMessage)
+			Notifications:TopToAll({text="#hlw_tutorial_message_controller", duration=5.0, style={color="white", ["font-size"]="30px"}})
 			EmitGlobalSound("HLW.TutorialSound")
 		end)
 		Timers:CreateTimer(7, function()
-			local centerMessage =  { message = "#hlw_tutorial_message_income", duration = 5 }
-			FireGameEvent("show_center_message", centerMessage)
+			Notifications:TopToAll({text="#hlw_tutorial_message_income", duration=5.0, style={color="white", ["font-size"]="30px"}})
 			EmitGlobalSound("HLW.TutorialSound")
 		end)
 		Timers:CreateTimer(13, function()
-			local centerMessage =  { message = "#hlw_tutorial_message_objective", duration = 5 }
-			FireGameEvent("show_center_message", centerMessage)
+			Notifications:TopToAll({text="#hlw_tutorial_message_objective", duration=5.0, style={color="white", ["font-size"]="30px"}})
 			EmitGlobalSound("HLW.TutorialSound")
 		end)
 	elseif newState == DOTA_GAMERULES_STATE_HERO_SELECTION then		
@@ -241,7 +236,6 @@ function GameMode:OnEntityKilled( keys )
 		CustomGameEventManager:Send_ServerToPlayer(PlayerResource:GetPlayer(killerEntity:GetPlayerID()), "UpdateButtonStatuses", GameMode:GetButtonUpdateData(killerEntity:GetPlayerID()) )
 	end
 end
-
 
 -- This function is called 1 to 2 times as the player connects initially but before they 
 -- have completely connected

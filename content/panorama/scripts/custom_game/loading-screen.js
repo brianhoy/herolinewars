@@ -37,7 +37,7 @@ function SetHost(keys)
 		return;
 	} 
 	
-	$.Msg("Recieved Set Host.");
+//	$.Msg("Recieved Set Host.");
 	IsHost = true;
 	GameEvents.Unsubscribe(SettingListener);
 	GameEvents.SendCustomGameEventToServer( "RecievedSetHost", { uselessVar: 42 });

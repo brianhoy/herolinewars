@@ -74,9 +74,7 @@ function BuyCreep()
 		GameEvents.SendCustomGameEventToServer( "OnPlayerUpgrade", {PlayerID: m_PlayerID});
 		return;
 	}
-	GameEvents.SendCustomGameEventToServer( "OnPlayerBuyCreep", 
-											{ PlayerID: m_PlayerID, 
-												CreepID: m_CreepNumber });		
+	GameEvents.SendCustomGameEventToServer( "OnPlayerBuyCreep", {PlayerID: m_PlayerID, CreepID: m_CreepNumber});		
 }
 
 function BuyAllCreeps()
@@ -86,9 +84,7 @@ function BuyAllCreeps()
 		GameEvents.SendCustomGameEventToServer( "OnPlayerUpgrade", {PlayerID: m_PlayerID});
 		return;
 	}
-	GameEvents.SendCustomGameEventToServer( "OnPlayerBuyAllCreeps", 
-											{ PlayerID: m_PlayerID, 
-												CreepID: m_CreepNumber });
+	GameEvents.SendCustomGameEventToServer( "OnPlayerBuyAllCreeps", {PlayerID: m_PlayerID, CreepID: m_CreepNumber});
 }
 
 (function() 

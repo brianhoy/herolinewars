@@ -1,33 +1,33 @@
 .ButtonRowHorizontal
 {
-    flow-children: right;
-		
-
-    margin-left: 27%;
-    margin-bottom: 20%;
+	flow-children: right;
+	margin-bottom: 21%;
 	vertical-align: bottom;
-    horizontal-align: left;
-    z-index: -1;
+	horizontal-align: center;
+	z-index: -1;
+	background-color: #000000da;
+	padding: 4% 0.5% 4% 0.5%;
+	border: 2px solid #6C2756;
 }
 
 .ButtonRowVertical
 {
-    flow-children: down;
-
-    vertical-align: bottom;
-    horizontal-align: left;
-    margin-left: 1%;
-    margin-bottom: 20%;
-
+	flow-children: down;
+	vertical-align: bottom;
+	horizontal-align: left;
+	margin-left: 1%;
+	margin-bottom: 20%;
+	background-color: #000000da;
+	padding: 0.5% 4% 0.5% 4%;
+	border: 2px solid #6C2756;
 }
 
 .Button
 {
-    width: 66px;
-    height: 66px;
-    
-    border-radius: 0px;
-    opacity: 1;
+	width: 66px;
+	height: 66px;
+	border-radius: 0px;
+	opacity: 1;
 }
 
 .Button:hover 
@@ -37,32 +37,31 @@
 
 .Button:active
 {
-    transform: scaleX(0.96) scaleY(0.96);
+	transform: scaleX(0.96) scaleY(0.96);
 }
 
 #base_panel_0
 {
-    vertical-align: top;
+	vertical-align: top;
 }
 
 .Image
 {
-    vertical-align: bottom;
-    horizontal-align: right;
-    margin-right: 4px;
-    margin-bottom: 4px;
+	vertical-align: bottom;
+	horizontal-align: right;
+	margin-right: 4px;
+	margin-bottom: 4px;
 
-    width: 59px;
-    height: 59px;
-    opacity: 1;
-    
+	width: 59px;
+	height: 59px;
+	opacity: 1;
 }
 
 .Label
 {
 	color: #eeeeee;
-    font-size: 14px;
-    font-weight: bold;
+	font-size: 14px;
+	font-weight: bold;
 	text-shadow: 0px 0px 6px 7 #ADA11D;
 	margin-right: 5px;
 	margin-bottom: 5px;
@@ -74,9 +73,9 @@
 
 .borderimage
 {
-    vertical-align: bottom;
-    horizontal-align: left;
-    
-    width: 66px;
-    height: 66px;
+	vertical-align: bottom;
+	horizontal-align: left;
+	
+	width: 66px;
+	height: 66px;
 }
